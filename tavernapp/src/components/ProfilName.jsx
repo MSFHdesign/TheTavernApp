@@ -10,7 +10,7 @@ const UserName = {
 }
 export default function ProfilName() {
   return (
-      <Typography variant="p" color="initial">{UserName.U1}</Typography>
+      <Typography variant="p" color="initial" sx={{fontSize: '1.5rem', maxWidth: '100%'}}>{UserName.U1}</Typography>
            
   )
 }

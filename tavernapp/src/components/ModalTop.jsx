@@ -49,8 +49,9 @@ export default function BasicModal() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: 'center', display: 'flex', alignItems: 'center'}}>
-          <ProfilPic /> <Box sx={{p:'0.2rem'}}/>
-    <ProfilName /> 
+          <ProfilPic /> 
+          <Box sx={{p:'0.2rem'}}/>
+            <ProfilName /> 
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
             LOG UD! 
