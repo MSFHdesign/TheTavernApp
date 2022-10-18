@@ -5,3 +5,5 @@ export default function AddArticle() {
     <div>AddArticle</div>
   )
 }
+
+
