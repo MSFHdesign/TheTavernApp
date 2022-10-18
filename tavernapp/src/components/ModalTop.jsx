@@ -6,9 +6,9 @@ import Modal from '@mui/material/Modal';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const style = {
   position: 'absolute',
-  top: '16%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  top: '7%',
+  right: '0%',
+ 
   width: '50%',
   bgcolor: 'background.paper',
   border: 'red',
