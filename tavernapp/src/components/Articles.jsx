@@ -28,6 +28,11 @@ export default function Articles() {
                             <img src = {imageURL} alt="title" style = {{height: 180, width: 180}}/>
                         </div>
                     </div>
+                    <div className='col-9 ps-3'>
+                        <h2>{title}</h2>
+                        <p>{createdAt.toDate().toDateString()}</p>
+                        <h4>{description}</h4>
+                        </div>
                 </div>
             ))
         )}
