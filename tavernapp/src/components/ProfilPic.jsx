@@ -18,12 +18,12 @@ const UserName = {
 export default function ProfilPic() {
   return (
 
-    <Box sx={{display:'flex', justifyContent: 'left', alignItems: 'center'}}> 
+    <Box sx={{display:'flex', justifyContent: 'left', alignItems: 'center', pt: 2, pb: 2,}}> 
     <Box sx={StyledProfilPictur}>
             
 
     </Box>
-        <Typography variant="h2" color="initial" sx={{fontSize: '1.5rem', textAlign: 'center', pl: 3,}}>Velkommen <br/> {UserName.NameFromDefault} </Typography>
+        <Typography variant="h2" color="initial" sx={{fontSize: '1.5rem', textAlign: 'center', p: 3,}}>Velkommen <br/> {UserName.NameFromDefault} </Typography>
        
     </Box>
   )
