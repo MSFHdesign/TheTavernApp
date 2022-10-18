@@ -1,4 +1,4 @@
-import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection, doc, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import {db} from "../firebaseConfig";
 
@@ -8,9 +8,13 @@ export default function Articles() {
         const articleRef = collection(db, "Articles");
         const q = query(articleRef, orderBy("createdAt", "desc"));
         onSnapshot(q,(snapshot) =>{
-            console.log(snapshot);
-        })
-    })
+            const articles = snapshot.docs.map((doc) =>({
+            id: doc.id,
+            ...doc.data(),}));
+            SetArticles(articles);
+            console.log(articles)
+        });
+    },[]);
   return (
     <div>
         {
