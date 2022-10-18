@@ -19,10 +19,9 @@ export default function Articles() {
     <div>
         {
             Articles.length === 0 ? (
-                <p>no articles found!</p>
+                <p>No articles found!</p>
             ):(
-                Articles.map((article) => <div className='articles'>
-                div </div>
+                Articles.map((article) => <div className='articles'></div>
             ))
         }
     </div>
