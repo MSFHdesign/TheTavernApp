@@ -19,7 +19,7 @@ export default function Articles() {
     <div>
         {
             Articles.length === 0 ? (
-                <p>no articles found!</p>
+                <p>No articles found!</p>
             ) : (
                 Articles.map(({id,title,description,imageURL,createdAt}) => (
                 <div className = 'articles' key = {id}>
