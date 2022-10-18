@@ -4,6 +4,7 @@ import TopNav from './components/TopNav.js';
 import AddArticle from './components/AddArticle';
 import Articles from './components/Articles';
 import ProfilPic from './components/ProfilPic';
+import BottomNav from './components/BottomNav';
 
 
 
@@ -46,6 +47,7 @@ function App() {
     <div className='form'>
       <AddArticle/>
     </div>
+    <BottomNav />
     </div>
     
   );
