@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import AddArticle from './components/AddArticle';
 import Articles from './components/Articles';
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         
         
         <h1>The Tavern</h1>
-    
+    <AccountCircleIcon />
       </header>
       <div className='articles'>
       <Articles/>
