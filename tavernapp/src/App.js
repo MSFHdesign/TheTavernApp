@@ -3,6 +3,7 @@ import './App.css';
 import AddArticle from './components/AddArticle';
 import Articles from './components/Articles';
 
+
 function App() {
   return (
     <div className="App">
@@ -10,7 +11,7 @@ function App() {
         
         
         <h1>The Tavern</h1>
-        
+    
       </header>
       <div className='articles'>
       <Articles/>

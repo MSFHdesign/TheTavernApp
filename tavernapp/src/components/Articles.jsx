@@ -22,7 +22,7 @@ export default function Articles() {
                 <p>no articles found!</p>
             ):(
                 Articles.map((article) => <div className='articles'>
-                div</div>
+                div </div>
             ))
         }
     </div>
