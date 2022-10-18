@@ -4,14 +4,15 @@ import React from 'react'
 
 const StyledProfilPictur = {
     border: '2px solid red',
-    borderRadius: '100px',
+    borderRadius: '50%',
     width: '82px',
     height: '82px',
 
 }
 
 const UserName = {
-    NameFromDefault: 'Guest',
+    NameFallBack: 'Guest',
+    U1: 'Rasmus The Reactor'
 
 }
 
@@ -23,7 +24,7 @@ export default function ProfilPic() {
             
 
     </Box>
-        <Typography variant="h2" color="initial" sx={{fontSize: '1.5rem', textAlign: 'center', p: 3,}}>Velkommen <br/> {UserName.NameFromDefault} </Typography>
+        <Typography variant="h2" color="initial" sx={{fontSize: '1.5rem', textAlign: 'center', p: 3,}}>Velkommen <br/> {UserName.NameFallBack} </Typography>
        
     </Box>
   )
