@@ -3,7 +3,7 @@ import './App.css';
 import TopNav from './components/TopNav.js';
 import AddArticle from './components/AddArticle';
 import Articles from './components/Articles';
-
+import ProfilPic from './components/ProfilPic';
 
 
 
@@ -14,6 +14,32 @@ function App() {
         <TopNav/>
         
       </header>
+    <ProfilPic />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div className='articles'>
       <Articles/>
     </div>

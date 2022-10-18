@@ -12,7 +12,7 @@ const style = {
   width: '50%',
   bgcolor: 'background.paper',
   border: 'red',
-  boxShadow: 24,
+  boxShadow: 10,
   p: 4,
 };
 
