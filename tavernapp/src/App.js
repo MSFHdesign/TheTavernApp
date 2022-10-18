@@ -1,6 +1,7 @@
 import React from 'react';
-
 import './App.css';
+import AddArticle from './components/AddArticle';
+import Articles from './components/Articles';
 
 function App() {
   return (
@@ -11,7 +12,14 @@ function App() {
         <h1>Magnus er en spejderdreng!</h1>
         
       </header>
+      <div className='articles'>
+      <Articles/>
     </div>
+    <div className='form'>
+      <AddArticle/>
+    </div>
+    </div>
+    
   );
 }
 
