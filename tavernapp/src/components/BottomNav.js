@@ -12,19 +12,19 @@ import messages from '../images/messages.png';
 export default function BottomNav() {
     return (
 
-        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', }}>
+        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', position: 'sticky', }}>
 
         <Link to="/communities">
-          <img src={community} alt="Community icon" style={{height: "50px"}}/>
+          <img src={community} alt="Community icon" style={{height: "30px"}}/>
         </Link>
         <Link to="/groups">
-          <img src={groups} alt="Groups icon" style={{height: "50px"}}/>
+          <img src={groups} alt="Groups icon" style={{height: "30px"}}/>
         </Link>
         <Link to="/messages">
-          <img src={messages} alt="Messages icon" style={{height: "50px"}}/>
+          <img src={messages} alt="Messages icon" style={{height: "30px"}}/>
         </Link>
         <Link to="/dice">
-          <img src={dice} alt="Dice icon" style={{height: "50px"}}/>
+          <img src={dice} alt="Dice icon" style={{height: "30px"}}/>
         </Link>
 
         </Box>
