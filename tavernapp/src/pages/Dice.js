@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Groups() {
+export default function Dice() {
     return (
         <div>
-                <h2>Groups</h2>
+                <h2>Dice generator</h2>
                 <p>Nothing here yet</p>
         </div>
 

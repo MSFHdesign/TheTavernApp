@@ -83,7 +83,7 @@ export default function AddArticle() {
         <input type="text" name='description' className='form-control' value={formData.description} onChange={(e)=> handleChange2(e)}/>
 
         <label htmlFor="">Image</label>
-        <input type="file" name="image" accept="image/*" classname="form-control" onChange={(e)=> handleImageChange(e)}/>
+        <input type="file" name="image" accept="image/*" className="form-control" onChange={(e)=> handleImageChange(e)}/>
 
 {progress === 0 ? null :(
     <div className="progess">

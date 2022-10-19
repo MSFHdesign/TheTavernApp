@@ -1,17 +1,19 @@
 
 import React from 'react';
 import {Box} from '@mui/material';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import community from '../images/community.png';
 import dice from '../images/dice.png';
 import groups from '../images/groups.png';
 import messages from '../images/messages.png';
 
+
+
 export default function BottomNav() {
     return (
-        <Router>
-        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', }}>
 
+        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', }}>
+        <Router>
         <Link to="/communities">
           <img src={community} alt="Community icon" style={{height: "50px"}}/>
         </Link>
@@ -24,8 +26,8 @@ export default function BottomNav() {
         <Link to="/dice">
           <img src={dice} alt="Dice icon" style={{height: "50px"}}/>
         </Link>
-            
-        </Box>
         </Router>
+        </Box>
+
     )
 }
