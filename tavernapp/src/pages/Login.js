@@ -2,8 +2,8 @@ import { Box } from '@mui/system'
 import React from 'react'
 import Typography from '@mui/material/Typography'
 
-import LoginUser from './LoginUser.jsx';
-import CreateUser from './CreateUser.jsx'; 
+import LoginUser from '../components/LoginUser.jsx';
+import CreateUser from '../components/CreateUser.jsx'; 
 
 
 export default function Login() {
