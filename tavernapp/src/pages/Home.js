@@ -5,6 +5,7 @@ import ProfilPic from '../components/ProfilPic';
 import ProfilName from '../components/ProfilName.jsx';
 
 import { Box,  } from '@mui/material'
+import BottomNav from '../components/BottomNav.js';
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
     <Articles/>
   </div>
     <AddArticle/>
+
  
   </div>
     )}
