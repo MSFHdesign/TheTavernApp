@@ -1,6 +1,8 @@
-import { collection, doc, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import {db} from "../firebaseConfig";
+import DeleteArticle from './DeleteArticle';
+import "./Article.css"
 
 export default function Articles() {
     const [Articles, SetArticles] = useState([]);
@@ -16,22 +18,21 @@ export default function Articles() {
         });
     },[]);
   return (
-    <div>
+    <div className='articles'>
         {
             Articles.length === 0 ? (
                 <p>No articles found!</p>
             ) : (
                 Articles.map(({id,title,description,imageUrl,createdAt}) => (
-                <div className = 'articles' key = {id}>
-                    <div className='row'>
-                        <div className='col-3'>
-                            <img src = {imageUrl} alt="title" style = {{height: 180, width: 180}}/>
-                        </div>
-                    </div>
-                    <div className='col-9 ps-3'>
+                <div className = 'article' key = {id}>
+                    <div className='text'>
                         <h2>{title}</h2>
                         <p>{createdAt.toDate().toDateString()}</p>
                         <h4>{description}</h4>
+                        <div className='img'>
+                            <img src = {imageUrl} alt="title" />
+                    </div>
+                        <DeleteArticle id={id} imageUrl={imageUrl}/>
                         </div>
                 </div>
             ))

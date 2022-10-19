@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage"
 import {storage, db} from "./../firebaseConfig"
 import {toast} from "react-toastify"
+import "./AddArticle.css"
 
 export default function AddArticle() {
     const [formData, setFormData] =useState({
@@ -16,6 +17,12 @@ export default function AddArticle() {
 
     const handleChange=(e)=>{
         setFormData({...formData,[e.target.name]: e.target.value});
+        console.log(formData);
+    };
+
+    const handleChange2=(e)=>{
+        setFormData({...formData,[e.target.name]: e.target.value});
+        console.log(formData);
     };
 
     const handleImageChange=(e)=>{
@@ -23,7 +30,7 @@ export default function AddArticle() {
     };
 
     const handlePublish = ()=>{
-        if(!formData.title  || !formData.image){
+        if(!formData.title  || !formData.description){
             alert("Please fill all the fields");
             return;
         }
@@ -66,14 +73,14 @@ export default function AddArticle() {
     });
 }
   return (
-    <div className='border p-3 mt-3 bg-light' style={{position: "fixed"}}>
-        <h2>Good boy :D</h2>
+    <div className='form'>
+        <h2>Add a post</h2>
         <label htmlFor="">Title</label>
         <input type="text" name='title' className='form-control' value={formData.title} onChange={(e)=> handleChange(e)} />
         
-        {/* Description*/}
-        <label htmlFor="">Description</label>
-        <textarea name='desctription' className='form-control' value={formData.description} onChange={(e)=> handleChange(e)}/>
+        {/* description*/}
+        <label htmlFor="">description</label>
+        <input type="text" name='description' className='form-control' value={formData.description} onChange={(e)=> handleChange2(e)}/>
 
         <label htmlFor="">Image</label>
         <input type="file" name="image" accept="image/*" classname="form-control" onChange={(e)=> handleImageChange(e)}/>
@@ -88,7 +95,7 @@ export default function AddArticle() {
     </div>
 )}
     
-        <button className='form-control btn-primary mt-2'onClick={handlePublish}>Publish</button>
+        <button className='form-control-btn'onClick={handlePublish}>Publish</button>
     </div>
 
   )

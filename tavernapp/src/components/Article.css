@@ -1,0 +1,39 @@
+.articles{
+    background-color: aqua;
+    width: 100%;
+    display: block;
+    height: fit-content;
+}
+
+.article{
+    background-color: rebeccapurple;
+    display: flex;
+    margin-top: 50px;
+}
+
+.img > img{
+    max-width: 100%;
+}
+
+.img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text{
+    margin:0 0 15px 15px;
+}
+
+.text h2{
+    margin-bottom: 5px;
+}
+
+.text p{
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.text h4{
+    font-weight: 400;
+}
+

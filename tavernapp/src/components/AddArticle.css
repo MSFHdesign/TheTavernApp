@@ -1,0 +1,16 @@
+.form{
+    display: flex;
+    width: 250px;
+    min-height:300px;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.form-control, .form-control-btn{
+    font-size: 16px;
+    padding: 5px;
+}
+.form label,.form-control-btn{
+margin-top: 20px;
+margin-bottom: 5px;
+}

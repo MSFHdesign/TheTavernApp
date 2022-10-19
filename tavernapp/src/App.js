@@ -22,31 +22,10 @@ function App() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div className='articles'>
       <Articles/>
     </div>
-    <div className='form'>
       <AddArticle/>
-    </div>
     <BottomNav />
     </div>
     
