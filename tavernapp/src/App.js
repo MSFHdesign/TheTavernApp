@@ -10,7 +10,6 @@ import Home from './pages/Home'
 import Login from './pages/Login';
 import TopNav from './components/TopNav';
 
-// import Login from './components/Login.js';
 
 function App() {
   return (
