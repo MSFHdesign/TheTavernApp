@@ -9,7 +9,7 @@ export default function AddArticle() {
     const [formData, setFormData] =useState({
         title:"",
         description:"",
-        image:"",
+        image:"test",
         createdAt: Timestamp.now().toDate(),
     });
 
@@ -35,6 +35,7 @@ export default function AddArticle() {
             return;
         }
 
+
         const storageRef = ref(storage,`/images/${formData.image.name}` );
 
         const uploadImage = uploadBytesResumable(storageRef,formData.image)
@@ -51,11 +52,27 @@ export default function AddArticle() {
             setFormData({
                 title: "",
                 description: "",
-                image: "",
+                image: "test",
             });
+            
             getDownloadURL(uploadImage.snapshot.ref)
             .then((url) => {
                 const articleRef = collection(db, "Articles");
+                console.log(formData.image);
+                if (formData.image==="test"){
+                    addDoc(articleRef, {
+                        title: formData.title,
+                        description: formData.description,
+                        createdAt: Timestamp.now().toDate(),
+                    })
+                    .then(() => {
+                        toast("Article added successfully",{type:"success"});
+                        setProgress(0);
+                    })
+                    .catch((err) => {
+                        toast("Error adding article",{type:"error"});
+                });
+                } else {
                 addDoc(articleRef, {
                     title: formData.title,
                     description: formData.description,
@@ -68,7 +85,7 @@ export default function AddArticle() {
                 })
                 .catch((err) => {
                     toast("Error adding article",{type:"error"});
-            });
+            });}
         });
     });
 }
