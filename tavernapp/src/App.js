@@ -13,7 +13,36 @@ function App() {
 <Routes> 
     <Route path='/' element={<Home/>}/>
 
+<<<<<<< Updated upstream
 </Routes>
+=======
+
+      
+
+
+
+
+
+        <div className='articles'>
+          <Articles/>
+        </div>
+          <AddArticle/>
+ 
+
+    
+        <BottomNav>
+          <Routes>
+                  <Route path='/communities' element={<Communities />} />
+                  <Route path='/groups' element={<Groups />} />
+                  <Route path='/messages' element={<Messages />} />
+                  <Route path='/dice' element={<Dice />} />
+          </Routes>
+        </BottomNav>
+      </body>
+
+
+    </div>
+>>>>>>> Stashed changes
     
     
   );
