@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ProfilPic from './ProfilPic'
-
+import { Link } from 'react-router-dom';
 import ProfilName from './ProfilName';
 
 const style = {
@@ -54,7 +54,7 @@ export default function BasicModal() {
             <ProfilName /> 
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
-            LOG UD! 
+          <Link to="/login">  LOG UD! </Link>
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
             Rediger profil 
