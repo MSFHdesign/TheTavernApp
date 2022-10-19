@@ -8,7 +8,7 @@ import BtnTopapp from './ModalTop.jsx';
 export default function TopNav() {
   return (
     <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', }}>
-      <Link to="/communities">
+      <Link to="/">
           <img src={logo} alt="The Tavern Logo" style={{width: "100px"}}/>
       </Link>
         
