@@ -4,10 +4,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ProfilPic from './ProfilPic'
+
+import ProfilName from './ProfilName';
+
 const style = {
   position: 'absolute',
   top: '7%',
-  right: '0%',
+  right: '10%',
  
   width: '50%',
   bgcolor: 'background.paper',
@@ -44,8 +48,10 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: 'center'}}>
-            Profil
+          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: 'center', display: 'flex', alignItems: 'center'}}>
+          <ProfilPic /> 
+          <Box sx={{p:'0.2rem'}}/>
+            <ProfilName /> 
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
             LOG UD! 

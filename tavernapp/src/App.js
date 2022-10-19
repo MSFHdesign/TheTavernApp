@@ -4,9 +4,13 @@ import TopNav from './components/TopNav.js';
 import AddArticle from './components/AddArticle';
 import Articles from './components/Articles';
 import ProfilPic from './components/ProfilPic';
+import ProfilName from './components/ProfilName.jsx';
 import BottomNav from './components/BottomNav';
 
 
+import { Box,  } from '@mui/material'
+
+// import Login from './components/Login.js';
 
 function App() {
   return (
@@ -15,8 +19,15 @@ function App() {
         <TopNav/>
         
       </header>
-    <ProfilPic />
+      <body>
+    <Box sx={{display: 'flex', alignItems: 'center'}}>
+    <ProfilPic /> <Box sx={{p:'1rem'}}/>
+    <ProfilName />
+    </Box>
 
+
+
+    </body>
 
 
 

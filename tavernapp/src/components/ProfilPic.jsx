@@ -1,19 +1,18 @@
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
 
 
 const StyledProfilPictur = {
     border: '2px solid red',
-    borderRadius: '100px',
-    width: '82px',
-    height: '82px',
+    borderRadius: '50%',
+    width: '50px',
+    height: '50px',
+
 
 }
 
-const UserName = {
-    NameFromDefault: 'Guest',
 
-}
+
 
 export default function ProfilPic() {
   return (
@@ -23,7 +22,7 @@ export default function ProfilPic() {
             
 
     </Box>
-        <Typography variant="h2" color="initial" sx={{fontSize: '1.5rem', textAlign: 'center', p: 3,}}>Velkommen <br/> {UserName.NameFromDefault} </Typography>
+
        
     </Box>
   )
