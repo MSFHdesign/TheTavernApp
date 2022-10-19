@@ -9,4 +9,8 @@ export default function Communities() {
 
 
     )
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
