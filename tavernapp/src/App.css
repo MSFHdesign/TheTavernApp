@@ -1,5 +1,8 @@
 
-
+.planks-bg {
+  background-image: url(/src/images/planks.png);
+  
+}
 
 .App {
 margin: 2rem 2rem;
