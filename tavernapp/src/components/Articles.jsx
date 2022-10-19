@@ -21,11 +21,11 @@ export default function Articles() {
             Articles.length === 0 ? (
                 <p>No articles found!</p>
             ) : (
-                Articles.map(({id,title,description,imageURL,createdAt}) => (
+                Articles.map(({id,title,description,imageUrl,createdAt}) => (
                 <div className = 'articles' key = {id}>
                     <div className='row'>
                         <div className='col-3'>
-                            <img src = {imageURL} alt="title" style = {{height: 180, width: 180}}/>
+                            <img src = {imageUrl} alt="title" style = {{height: 180, width: 180}}/>
                         </div>
                     </div>
                     <div className='col-9 ps-3'>

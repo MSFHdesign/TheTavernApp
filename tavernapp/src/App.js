@@ -5,6 +5,7 @@ import AddArticle from './components/AddArticle';
 import Articles from './components/Articles';
 import ProfilPic from './components/ProfilPic';
 import ProfilName from './components/ProfilName.jsx';
+import BottomNav from './components/BottomNav';
 
 
 import { Box,  } from '@mui/material'
@@ -57,6 +58,7 @@ function App() {
     <div className='form'>
       <AddArticle/>
     </div>
+    <BottomNav />
     </div>
     
   );
