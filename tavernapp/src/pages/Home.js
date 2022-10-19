@@ -1,4 +1,4 @@
-import TopNav from '../components/TopNav.js';
+
 import AddArticle from '../components/AddArticle';
 import Articles from '../components/Articles';
 import ProfilPic from '../components/ProfilPic';
@@ -13,7 +13,7 @@ export default function Home() {
     
     <div className="App">
     <header className="App-header">
-      <TopNav/>
+      
       
     </header>
     <body>
