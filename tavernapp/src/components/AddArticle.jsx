@@ -35,7 +35,7 @@ export default function AddArticle() {
             return;
         }
 
-        const storageRef = ref(storage,`/images/${Date.now()}${formData.image.name}` );
+        const storageRef = ref(storage,`/images/${formData.image.name}` );
 
         const uploadImage = uploadBytesResumable(storageRef,formData.image)
 
@@ -80,7 +80,7 @@ export default function AddArticle() {
         
         {/* description*/}
         <label htmlFor="">description</label>
-        <input type="text" name='description' className='form-control' value={formData.description} onChange={(e)=> handleChange2(e)}/>
+        <textarea name='description' className='form-control' value={formData.description} onChange={(e)=> handleChange2(e)}/>
 
         <label htmlFor="">Image</label>
         <input type="file" name="image" accept="image/*" className="form-control" onChange={(e)=> handleImageChange(e)}/>

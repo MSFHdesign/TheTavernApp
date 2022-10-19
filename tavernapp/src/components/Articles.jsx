@@ -14,9 +14,11 @@ export default function Articles() {
             id: doc.id,
             ...doc.data(),}));
             SetArticles(articles);
-            console.log(articles)
+            console.log(articles);
         });
+        
     },[]);
+
   return (
     <div className='articles'>
         {
@@ -29,7 +31,7 @@ export default function Articles() {
                         <h2>{title}</h2>
                         <p>{createdAt.toDate().toDateString()}</p>
                         <h4>{description}</h4>
-                        <div className='img'>
+                        <div className={imageUrl==="https://firebasestorage.googleapis.com/v0/b/the-tavern-8aaf4.appspot.com/o/images%2F252297749_595594128348974_7081586526780283770_n.jpg?alt=media&token=8c36dafb-9dfb-4328-a2b3-b4a17c4ab426" ? "noimg" : "img"}>
                             <img src = {imageUrl} alt="title" />
                     </div>
                         <DeleteArticle id={id} imageUrl={imageUrl}/>
