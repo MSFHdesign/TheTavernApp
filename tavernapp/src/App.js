@@ -15,9 +15,9 @@ function App() {
   return (
 <main>
 <Routes> 
+    <Route path='/login' element={<Login />} />
     <Route path='/' element={<Home/>}/>
     <Route path='*' element={<Home/>}/>
-    <Route path='/login' element={<Login />} />
 
     <Route path='communities' element={<Communities/>}/>
     <Route path='/groups' element={<Groups/>}/>
