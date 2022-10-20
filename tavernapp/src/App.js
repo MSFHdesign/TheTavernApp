@@ -9,7 +9,7 @@ import Dice from './pages/Dice';
 import Home from './pages/Home'
 import Login from './pages/Login';
 import TopNav from './components/TopNav';
-import Dashboard from './components/Dashboard/Dashboard';
+
 
 function App() {
   return (
@@ -24,7 +24,6 @@ function App() {
     <Route path='/groups' element={<Groups/>}/>
     <Route path='/messages' element={<Messages/>}/>
     <Route path='/dice' element={<Dice/>}/>
-    <Route path='/dashboard' element={<Dashboard/>}/>
 
     
 </Routes>
