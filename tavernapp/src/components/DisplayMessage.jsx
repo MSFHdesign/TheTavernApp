@@ -29,7 +29,7 @@ export default function DisplayMessages() {
                 <div className = 'Message' key = {id}>
                     <div className='text'>
                         <h2>{Title} sent to {Group}</h2>
-                        <p>Sent by: {SentBy} {createdAt.toDate().toDateString()}</p>
+                        <p>Sent by michael: {SentBy} {createdAt.toDate().toDateString()}</p>
                         <h4>{Description}</h4>
                         
                         <DeleteMessages id={id}/>
