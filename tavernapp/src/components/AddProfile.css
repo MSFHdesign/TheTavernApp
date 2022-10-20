@@ -2,10 +2,11 @@
     margin: 0;
     overflow: hidden;
     overflow-y: scroll;
+    width: 100%;
 }
 
 h2{
-    margin-top: 0;
+    margin: 0;
 }
 
 .from label{
