@@ -1,3 +1,4 @@
+import { Box, Typography } from '@mui/material';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import {db} from "../firebaseConfig";
@@ -26,15 +27,15 @@ export default function DisplayMessages() {
                 <p>No Messages found!</p>
             ) : (
                 Messages.map(({id,Title,Description,createdAt,SentBy,Group}) => (
-                <div className = 'Message' key = {id}>
+                <Box sx={{m: 1, backgroundColor: 'white'}} className = 'Message' key = {id}>
                     <div className='text'>
-                        <h2>{Title} sent to {Group}</h2>
-                        <p>Sent by michael: {SentBy} {createdAt.toDate().toDateString()}</p>
-                        <h4>{Description}</h4>
+                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold'}}>{Title} sent to {Group}</Typography>
+                        <Typography variant ='p' sx={{textDecoration: 'underline'}}>Sent by: {SentBy} {createdAt.toDate().toDateString()}</Typography>
+                        <Typography vartiant='p'>{Description}</Typography>
                         
                         <DeleteMessages id={id}/>
                         </div>
-                </div>
+                </Box>
             ))
         )}
     </div>

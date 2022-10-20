@@ -4,6 +4,8 @@ import React from 'react'
 import { toast } from 'react-toastify'
 import { db, storage } from '../firebaseConfig'
 
+import { Button } from '@mui/material'
+
 export default function DeleteMessage({id, imageUrl}) {
   const handleDelete =async() =>{
       try{
@@ -19,7 +21,7 @@ export default function DeleteMessage({id, imageUrl}) {
   }
 return (
   <div>
-      <button className='deletebtn' onClick={handleDelete}>Delete</button>
+      <Button sx={{border: '2px dotted red'}} className='deletebtn' onClick={handleDelete}>Delete</Button>
   </div>
 )
 }
