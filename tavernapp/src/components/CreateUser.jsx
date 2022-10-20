@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import '../styles/Btn.css';
 
 const style = {
   position: 'absolute',
@@ -28,7 +29,7 @@ export default function CreateUser() {
   
     return (
       <div>
-        <Button onClick={handleOpen}>Opret bruger</Button>
+        <Button className='UserBtns btn' onClick={handleOpen}>Opret bruger</Button>
         <Modal
           keepMounted
           open={open}

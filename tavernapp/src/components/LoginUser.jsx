@@ -5,6 +5,10 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import UserNameField from './LogindComponent/UserNameField.jsx';
+
+import '../styles/Btn.css'
+
 
 const style = {
   position: 'absolute',
@@ -28,7 +32,7 @@ export default function LoginUser() {
   
     return (
       <div>
-        <Button onClick={handleOpen}>Log ind</Button>
+        <Button className='UserBtns btn' onClick={handleOpen}>Log ind</Button>
         <Modal
           keepMounted
           open={open}
@@ -38,7 +42,13 @@ export default function LoginUser() {
         >
           <Box sx={style}>
             <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+              
+            <UserNameField />
+
+
+
+
+
             </Typography>
           </Box>
         </Modal>
