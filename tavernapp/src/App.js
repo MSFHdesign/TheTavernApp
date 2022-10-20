@@ -13,7 +13,7 @@ import TopNav from './components/TopNav';
 
 function App() {
   return (
-<main>
+<main className='planks-bg'>
 <TopNav/>
 <Routes> 
     <Route path='/login' element={<Login />} />
