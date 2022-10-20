@@ -1,0 +1,19 @@
+.form{
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+h2{
+    margin-top: 0;
+}
+
+.from label{
+    margin-bottom: 10px;
+}
+
+.form-control{
+    border: 1px solid black;
+}
+
+#imgInput{border: none;}
