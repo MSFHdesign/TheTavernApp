@@ -26,7 +26,7 @@ export default function FloatingActionButtons() {
     const handleClose = () => setOpen(false);
   
   return (
-    <Box sx={{ '& > :not(style)': { m: 1 } }}>
+    <Box sx={{ '& > :not(style)': { m: 2 } }}>
       <Fab color="primary" aria-label="add" onClick={handleOpen}>
         <AddIcon />
       </Fab>
@@ -39,7 +39,7 @@ export default function FloatingActionButtons() {
       >
         <Box sx={style}>
           
-          <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
+          <Typography id="keep-mounted-modal-description" sx={{ mt: 2, }}>
           <AddMessage/>
           </Typography>
         </Box>

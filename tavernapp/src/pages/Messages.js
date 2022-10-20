@@ -6,7 +6,10 @@ import DisplayMessages from '../components/DisplayMessage'
 import BoxAddMessage from '../components/BoxAddMessage.jsx';
 
 const ContainerStyle = {
-    minHeight: '100vh'
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
 
 
 }
@@ -17,7 +20,7 @@ export default function Messages() {
 
 
         <Box sx={ContainerStyle}> 
-            <Typography variant ='h2' sx={{fontSize: 50}}>
+            <Typography variant ='h2' sx={{fontSize: 50, }}>
                 Beskeder
             </Typography>
             
