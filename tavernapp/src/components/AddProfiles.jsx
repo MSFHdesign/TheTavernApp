@@ -1,7 +1,7 @@
 import { addDoc, collection, Timestamp } from 'firebase/firestore'
 import React, {useState} from 'react'
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage"
-import {storage, db} from "../firebaseConfigv2"
+import {storage, db} from "../firebaseConfig"
 import {toast} from "react-toastify"
 import "./AddProfile.css"
 
@@ -28,7 +28,7 @@ export default function AddProfile() {
     };
 
     const handlePublish = ()=>{
-        if(!formData.Username  || !formData.Password){
+        if(!formData.Username  || !formData.Password || !formData.Name || !formData.Age || !formData.profilepic || !formData.City){
             alert("Please fill all the fields");
             return;
         }
@@ -47,6 +47,7 @@ export default function AddProfile() {
             console.log(err);
         },
         ()=>{
+            alert("Your account have been created");
             setFormData({
                 Username: "",
                 Password: "",
@@ -54,7 +55,9 @@ export default function AddProfile() {
                 Name:"",
                 Age:"",
                 City:"",
-            });
+                
+            }
+            );
             
             getDownloadURL(uploadImage.snapshot.ref)
             .then((url) => {
@@ -112,7 +115,7 @@ export default function AddProfile() {
     </div>
 )}
     
-        <button className='form-control-btn'onClick={handlePublish}>Publish</button>
+        <button className='form-control-btn'onClick={handlePublish}>Add user</button>
     </div>
 
   )

@@ -1,31 +1,31 @@
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
-import {db} from "../firebaseConfig";
-import FirebaseDelete from './DeleteProfile';
+import {db} from "../firebaseConfigv2";
+import FirebaseDelete from './firebase delete';
 import "./Article.css"
 
-export default function Profiles() {
-    const [Profiles, SetProfiles] = useState([]);
+export default function Articles() {
+    const [Articles, SetArticles] = useState([]);
     useEffect(()=>{
-        const articleRef = collection(db, "profiles");
+        const articleRef = collection(db, "Articles");
         const q = query(articleRef, orderBy("createdAt", "desc"));
         onSnapshot(q,(snapshot) =>{
-            const Profiles = snapshot.docs.map((doc) =>({
+            const articles = snapshot.docs.map((doc) =>({
             id: doc.id,
             ...doc.data(),}));
-            SetProfiles(Profiles);
-            console.log(Profiles);
+            SetArticles(articles);
+            console.log(articles);
         });
         
     },[]);
 
   return (
-    <div className='Profiles'>
+    <div className='articles'>
         {
-            Profiles.length === 0 ? (
-                <p>No Profiles found!</p>
+            Articles.length === 0 ? (
+                <p>No articles found!</p>
             ) : (
-                Profiles.map(({id,title,description,imageUrl,createdAt}) => (
+                Articles.map(({id,title,description,imageUrl,createdAt}) => (
                 <div className = 'article' key = {id}>
                     <div className='text'>
                         <h2>{title}</h2>
