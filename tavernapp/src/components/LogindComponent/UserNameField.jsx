@@ -42,7 +42,7 @@ export default function InputAdornments() {
         <Typography variant='h4' > Log ind </Typography>
       <div>
       <TextField sx={{m:1, width: '90%'}}
-        helperText="Brugernavn her"
+        helperText="Rasmus The Reactor"
         id="demo-helper-text-misaligned"
         label="Brugernavn"
       />

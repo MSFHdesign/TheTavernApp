@@ -54,7 +54,7 @@ export default function BasicModal() {
             <ProfilName /> 
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
-          <Link to="/login">  LOG UD! </Link>
+          <Link to="/login">  LOG UD!</Link>
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
             Rediger profil 

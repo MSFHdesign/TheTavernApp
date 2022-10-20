@@ -1,11 +1,28 @@
+import { Box, Typography } from '@mui/material'
 import React from 'react'
+
+const ContainerStyle = {
+    display: 'flex',
+    minHeight: '100vh'
+
+
+}
+
 
 export default function Messages() {
     return (
-        <div>
-                <h2>Messages</h2>
-                <p>You have no new messages</p>
-        </div>
+
+
+        <Box sx={ContainerStyle}> 
+            <Typography variant ='h2' sx={{fontSize: 50}}>
+                Beskeder
+            </Typography>
+                        
+
+
+
+
+        </Box>
 
 
     )

@@ -1,8 +1,10 @@
 
-import AddArticle from '../components/AddArticle';
+
 import Articles from '../components/Articles';
 import ProfilPic from '../components/ProfilPic';
 import ProfilName from '../components/ProfilName.jsx';
+
+import OpenAddArticle from '../components/OpenAddArticle.jsx';
 
 import { Box,  } from '@mui/material'
 
@@ -12,10 +14,7 @@ export default function Home() {
     return(
     
     <div className="App">
-    <header className="App-header">
-      
-      
-    </header>
+
     <body>
   <Box sx={{display: 'flex', alignItems: 'center'}}>
   <ProfilPic /> <Box sx={{p:'1rem'}}/>
@@ -31,10 +30,13 @@ export default function Home() {
 
 
     <div className='articles'>
-    <Articles/>
-  </div>
-    <AddArticle/>
+       <Articles/>
+    </div>
+        <OpenAddArticle />
 
- 
+
+  
+
+
   </div>
     )}
