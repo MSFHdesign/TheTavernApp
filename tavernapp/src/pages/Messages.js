@@ -17,7 +17,7 @@ export default function Messages() {
             <Typography variant ='h2' sx={{fontSize: 50}}>
                 Beskeder
             </Typography>
-                        
+
 
 
 
