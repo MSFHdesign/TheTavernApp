@@ -1,0 +1,20 @@
+.form{
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+h2{
+    margin: 0;
+}
+
+.from label{
+    margin-bottom: 10px;
+}
+
+.form-control{
+    border: 1px solid black;
+}
+
+#imgInput{border: none;}

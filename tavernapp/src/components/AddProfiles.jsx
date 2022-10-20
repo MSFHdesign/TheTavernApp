@@ -7,10 +7,13 @@ import "./AddProfile.css"
 
 export default function AddProfile() {
     const [formData, setFormData] =useState({
-        title:"",
-        description:"",
-        image:"test",
+        Username:"",
+        Password:"",
+        profilepic:"test",
         createdAt: Timestamp.now().toDate(),
+        Name:"",
+        Age:"",
+        City:"",
     });
 
     const [progress, setProgress] = useState(0);
@@ -20,25 +23,20 @@ export default function AddProfile() {
         console.log(formData);
     };
 
-    const handleChange2=(e)=>{
-        setFormData({...formData,[e.target.name]: e.target.value});
-        console.log(formData);
-    };
-
     const handleImageChange=(e)=>{
-        setFormData({...formData,image:e.target.files[0]});
+        setFormData({...formData,profilepic:e.target.files[0]});
     };
 
     const handlePublish = ()=>{
-        if(!formData.title  || !formData.description){
+        if(!formData.Username  || !formData.Password){
             alert("Please fill all the fields");
             return;
         }
 
 
-        const storageRef = ref(storage,`/images/${formData.image.name}` );
+        const storageRef = ref(storage,`/profiles/${formData.profilepic.name}` );
 
-        const uploadImage = uploadBytesResumable(storageRef,formData.image)
+        const uploadImage = uploadBytesResumable(storageRef,formData.profilepic)
 
         uploadImage.on("state_changed",
         (snapshot)=>{
@@ -50,34 +48,27 @@ export default function AddProfile() {
         },
         ()=>{
             setFormData({
-                title: "",
-                description: "",
-                image: "test",
+                Username: "",
+                Password: "",
+                profilepic: "test",
+                Name:"",
+                Age:"",
+                City:"",
             });
             
             getDownloadURL(uploadImage.snapshot.ref)
             .then((url) => {
                 const ProfileRef = collection(db, "profiles");
-                console.log(formData.image);
-                if (formData.image==="test"){
-                    addDoc(ProfileRef, {
-                        title: formData.title,
-                        description: formData.description,
-                        createdAt: Timestamp.now().toDate(),
-                    })
-                    .then(() => {
-                        toast("Profile added successfully",{type:"success"});
-                        setProgress(0);
-                    })
-                    .catch((err) => {
-                        toast("Error adding Profile",{type:"error"});
-                });
-                } else {
+                console.log(formData.profilepic);
                 addDoc(ProfileRef, {
-                    title: formData.title,
-                    description: formData.description,
-                    imageUrl:url,
+                    Username: formData.Username,
+                    Password: formData.Password,
+                    profilepicUrl:url,
                     createdAt: Timestamp.now().toDate(),
+                    City:formData.City,
+                    Name:formData.Name,
+                    Age:formData.Age,
+
                 })
                 .then(() => {
                     toast("Profile added successfully",{type:"success"});
@@ -86,28 +77,37 @@ export default function AddProfile() {
                 .catch((err) => {
                     toast("Error adding Profile",{type:"error"});
             });}
-        });
+        );
     });
 }
   return (
     <div className='form'>
-        <h2>Add a post</h2>
-        <label htmlFor="">Title</label>
-        <input type="text" name='title' className='form-control' value={formData.title} onChange={(e)=> handleChange(e)} />
+        <h2>Add a Profile</h2>
+        <label htmlFor="">Username</label>
+        <input type="text" name='Username' className='form-control' value={formData.Username} onChange={(e)=> handleChange(e)} />
         
-        {/* description*/}
-        <label htmlFor="">description</label>
-        <textarea name='description' className='form-control' value={formData.description} onChange={(e)=> handleChange2(e)}/>
+        {/* Password*/}
+        <label htmlFor="">Password</label>
+        <input type="text" name='Password' className='form-control' value={formData.Password} onChange={(e)=> handleChange(e)}/>
 
-        <label htmlFor="">Image</label>
-        <input type="file" name="image" accept="image/*" className="form-control" onChange={(e)=> handleImageChange(e)}/>
+        <label htmlFor="">profilepic</label>
+        <input type="file" name="profilepic" accept="image/*" className="form-control" id="imgInput" onChange={(e)=> handleImageChange(e)}/>
+
+        <label htmlFor="">Name</label>
+        <input type="text" name='Name' className='form-control' value={formData.Name} onChange={(e)=> handleChange(e)} />
+        
+        <label htmlFor="">Age</label>
+        <input type="number" name='Age' className='form-control' value={formData.Age} onChange={(e)=> handleChange(e)} />
+
+        <label htmlFor="">City</label>
+        <input type="text" name='City' className='form-control' value={formData.City} onChange={(e)=> handleChange(e)} />
 
 {progress === 0 ? null :(
     <div className="progess">
         <div
         className="progress-bar progress-bar-striped mt-2"
         style={{width: `${progress}%` }}>
-            {`uploading image ${progress}%`}
+            {`uploading profilepic ${progress}%`}
         </div>
     </div>
 )}

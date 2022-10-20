@@ -3,7 +3,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import AddProfile from './AddProfiles'
 
 import '../styles/Btn.css';
 
@@ -38,9 +38,7 @@ export default function CreateUser() {
           aria-describedby="keep-mounted-modal-description"
         >
           <Box sx={style}>
-            <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+              <AddProfile/>
           </Box>
         </Modal>
       </div>
