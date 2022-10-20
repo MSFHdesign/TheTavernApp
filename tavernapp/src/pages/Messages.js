@@ -1,7 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import AddMessage from '../components/AddMessage'
+
 import DisplayMessages from '../components/DisplayMessage'
+
+import BoxAddMessage from '../components/BoxAddMessage.jsx';
 
 const ContainerStyle = {
     minHeight: '100vh'
@@ -18,8 +20,12 @@ export default function Messages() {
             <Typography variant ='h2' sx={{fontSize: 50}}>
                 Beskeder
             </Typography>
-            <DisplayMessages/>
-            <AddMessage/>
+            
+            <Box sx={{ m: 1, display: 'flex', }}>
+                <DisplayMessages/>
+            </Box>
+            <BoxAddMessage/>
+           
 
 
 
