@@ -26,7 +26,7 @@ export default function FloatingActionButtons() {
     const handleClose = () => setOpen(false);
   
   return (
-    <Box sx={{ '& > :not(style)': { m: 2 } }}>
+    <Box sx={{ '& > :not(style)': { mt: 2 } }}>
       <Fab color="primary" aria-label="add" onClick={handleOpen}>
         <AddIcon />
       </Fab>
