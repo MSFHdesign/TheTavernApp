@@ -27,11 +27,18 @@ export default function DisplayMessages() {
                 <p>No Messages found!</p>
             ) : (
                 Messages.map(({id,Title,Description,createdAt,SentBy,Group}) => (
-                <Box sx={{m: 1, backgroundColor: 'white'}} className = 'Message' key = {id}>
+                <Box sx={{m: 2, p: 1, backgroundColor: 'whitesmoke'}} className = 'Message' key = {id}>
                     <div className='text'>
-                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold'}}>{Title} sent to {Group}</Typography>
-                        <Typography variant ='p' sx={{textDecoration: 'underline'}}>Sent by: {SentBy} {createdAt.toDate().toDateString()}</Typography>
-                        <Typography vartiant='p'>{Description}</Typography>
+                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',}}>{Title} sent to {Group} 
+                        
+                        </Typography>
+                        
+                        <Typography variant ='p' sx={{textDecoration: 'underline', fontSize: 14, mb: 2}}>
+                            Sent by: {SentBy} {createdAt.toDate().toDateString() }
+                        <br/>
+                        </Typography>
+                        
+                        <Typography variant ='p' sx={{fontSize: 20, pt: 2, pb: '22px',}}>{Description}</Typography>
                         
                         <DeleteMessages id={id}/>
                         </div>
