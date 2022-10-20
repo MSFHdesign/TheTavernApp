@@ -11,7 +11,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Typography, Button } from '@mui/material';
 
-
+import {Link} from 'react-router-dom'
 
 export default function InputAdornments() {
 
@@ -74,9 +74,9 @@ export default function InputAdornments() {
         <Button className='UserBtns btn' sx={{ mt: 1, mr: 1, width: '50%'}} type="submit" variant="outlined">
          Hjælp
         </Button>
-        <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%' }} type="submit" variant="outlined">
+        <Link to="/home">   <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%' }} type="submit" variant="outlined">
           Logind
-        </Button>
+        </Button></Link>
 
         </Box>
         </FormControl>
