@@ -91,7 +91,7 @@ export default function AddProfile() {
         
         {/* Password*/}
         <label htmlFor="">Password</label>
-        <input type="text" name='Password' className='form-control' value={formData.Password} onChange={(e)=> handleChange(e)}/>
+        <input type="password" name='Password' className='form-control' value={formData.Password} onChange={(e)=> handleChange(e)}/>
 
         <label htmlFor="">profilepic</label>
         <input type="file" name="profilepic" accept="image/*" className="form-control" id="imgInput" onChange={(e)=> handleImageChange(e)}/>

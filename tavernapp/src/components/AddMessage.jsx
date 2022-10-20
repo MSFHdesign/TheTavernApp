@@ -77,7 +77,13 @@ export default function AddMessage() {
     <div className='form'>
         <h2>Add a post</h2>
         <label htmlFor="">Select group:</label>
-        <input type="text" name='Group' className='form-control' value={formData.Group} onChange={(e)=> handleChange(e)} />
+        <select name='Group' className='form-control' value={formData.Group} onChange={(e)=> handleChange(e)}>
+            <option value="Curse of Strahd">Curse Of Strahd</option>
+            <option value="Tomb of Horrors">Tomb of Horrors</option>
+            <option value="Dragon of Icespire Peek">Dragon of Icespire Peek</option>
+            <option value="Lost Mines of Phandelver">Lost Mines of Phandelver</option>
+            <option value="Candlekeep Mysteries">Candlekeep Mysteries</option>
+        </select>
 
         <label htmlFor="">Title:</label>
         <input type="text" name='Title' className='form-control' value={formData.Title} onChange={(e)=> handleChange(e)} />
