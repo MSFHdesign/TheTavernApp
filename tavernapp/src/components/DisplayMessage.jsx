@@ -1,40 +1,38 @@
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
-import {db} from "../firebaseConfigv2";
-import FirebaseDelete from './firebase delete';
-import "./Article.css"
+import {db} from "../firebaseConfig";
+import DeleteMessages from './DeleteMessage';
+import "./Message.css"
 
-export default function Articles() {
-    const [Articles, SetArticles] = useState([]);
+export default function DisplayMessages() {
+    const [Messages, SetMessages] = useState([]);
     useEffect(()=>{
-        const articleRef = collection(db, "Articles");
-        const q = query(articleRef, orderBy("createdAt", "desc"));
+        const MessageRef = collection(db, "Messages");
+        const q = query(MessageRef, orderBy("createdAt", "desc"));
         onSnapshot(q,(snapshot) =>{
-            const articles = snapshot.docs.map((doc) =>({
+            const Messages = snapshot.docs.map((doc) =>({
             id: doc.id,
             ...doc.data(),}));
-            SetArticles(articles);
-            console.log(articles);
+            SetMessages(Messages);
+            console.log(Messages);
         });
         
     },[]);
 
   return (
-    <div className='articles'>
+    <div className='Messages'>
         {
-            Articles.length === 0 ? (
-                <p>No articles found!</p>
+            Messages.length === 0 ? (
+                <p>No Messages found!</p>
             ) : (
-                Articles.map(({id,title,description,imageUrl,createdAt}) => (
-                <div className = 'article' key = {id}>
+                Messages.map(({id,Title,Description,createdAt,SentBy,Group}) => (
+                <div className = 'Message' key = {id}>
                     <div className='text'>
-                        <h2>{title}</h2>
-                        <p>{createdAt.toDate().toDateString()}</p>
-                        <h4>{description}</h4>
-                        <div className={!imageUrl ? "noimg" : "img"}>
-                            <img src = {imageUrl} alt="title" />
-                    </div>
-                        <FirebaseDelete id={id} imageUrl={imageUrl}/>
+                        <h2>{Title} sent to {Group}</h2>
+                        <p>Sent by: {SentBy} {createdAt.toDate().toDateString()}</p>
+                        <h4>{Description}</h4>
+                        
+                        <DeleteMessages id={id}/>
                         </div>
                 </div>
             ))
