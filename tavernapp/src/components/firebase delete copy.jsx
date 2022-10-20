@@ -2,7 +2,7 @@ import { deleteDoc,doc } from 'firebase/firestore'
 import { deleteObject, ref } from 'firebase/storage'
 import React from 'react'
 import { toast } from 'react-toastify'
-import { db, storage } from '../firebaseConfigv2'
+import { db, storage } from '../firebaseConfig'
 
 export default function DeleteArticle({id, imageUrl}) {
   const handleDelete =async() =>{

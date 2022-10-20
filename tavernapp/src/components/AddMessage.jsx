@@ -1,16 +1,18 @@
 import { addDoc, collection, Timestamp } from 'firebase/firestore'
 import React, {useState} from 'react'
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage"
-import {storage, db} from "../firebaseConfigv2"
+import {storage, db} from "../firebaseConfig"
 import {toast} from "react-toastify"
-import "./AddArticle.css"
+import "./AddMessage.css"
 
-export default function AddArticle() {
+export default function AddMessage() {
     const [formData, setFormData] =useState({
-        title:"",
-        description:"",
+        Title:"",
+        Description:"",
         image:"test",
         createdAt: Timestamp.now().toDate(),
+        Group:"",
+        SentBy:"",
     });
 
     const [progress, setProgress] = useState(0);
@@ -20,17 +22,8 @@ export default function AddArticle() {
         console.log(formData);
     };
 
-    const handleChange2=(e)=>{
-        setFormData({...formData,[e.target.name]: e.target.value});
-        console.log(formData);
-    };
-
-    const handleImageChange=(e)=>{
-        setFormData({...formData,image:e.target.files[0]});
-    };
-
     const handlePublish = ()=>{
-        if(!formData.title  || !formData.description){
+        if(!formData.Title  || !formData.Description){
             alert("Please fill all the fields");
             return;
         }
@@ -50,59 +43,52 @@ export default function AddArticle() {
         },
         ()=>{
             setFormData({
-                title: "",
-                description: "",
+                Title: "",
+                Description: "",
                 image: "test",
+                Group:"",
+                SentBy:"",
             });
             
             getDownloadURL(uploadImage.snapshot.ref)
             .then((url) => {
-                const articleRef = collection(db, "Articles");
+                const MessageRef = collection(db, "Messages");
                 console.log(formData.image);
                 if (formData.image==="test"){
-                    addDoc(articleRef, {
-                        title: formData.title,
-                        description: formData.description,
+                    addDoc(MessageRef, {
+                        Title: formData.Title,
+                        Description: formData.Description,
                         createdAt: Timestamp.now().toDate(),
+                        Group:formData.Group,
+                        SentBy:formData.SentBy,
                     })
                     .then(() => {
-                        toast("Article added successfully",{type:"success"});
+                        toast("Message added successfully",{type:"success"});
                         setProgress(0);
                     })
                     .catch((err) => {
-                        toast("Error adding article",{type:"error"});
+                        toast("Error adding Message",{type:"error"});
                 });
-                } else {
-                addDoc(articleRef, {
-                    title: formData.title,
-                    description: formData.description,
-                    imageUrl:url,
-                    createdAt: Timestamp.now().toDate(),
-                })
-                .then(() => {
-                    toast("Article added successfully",{type:"success"});
-                    setProgress(0);
-                })
-                .catch((err) => {
-                    toast("Error adding article",{type:"error"});
-            });}
+                }
         });
     });
 }
   return (
     <div className='form'>
         <h2>Add a post</h2>
-        <label htmlFor="">Title</label>
-        <input type="text" name='title' className='form-control' value={formData.title} onChange={(e)=> handleChange(e)} />
+        <label htmlFor="">Select group:</label>
+        <input type="text" name='Group' className='form-control' value={formData.Group} onChange={(e)=> handleChange(e)} />
+
+        <label htmlFor="">Title:</label>
+        <input type="text" name='Title' className='form-control' value={formData.Title} onChange={(e)=> handleChange(e)} />
         
-        {/* description*/}
-        <label htmlFor="">description</label>
-        <textarea name='description' className='form-control' value={formData.description} onChange={(e)=> handleChange2(e)}/>
+        {/* Description*/}
+        <label htmlFor="">Description:</label>
+        <textarea name='Description' className='form-control' value={formData.Description} onChange={(e)=> handleChange(e)}/>
 
-        <label htmlFor="">Image</label>
-        <input type="file" name="image" accept="image/*" className="form-control" onChange={(e)=> handleImageChange(e)}/>
-
-{progress === 0 ? null :(
+        <label htmlFor="">Sent by:</label>
+        <input type="text" name='SentBy' className='form-control' value={formData.SentBy} onChange={(e)=> handleChange(e)} />
+        {progress === 0 ? null :(
     <div className="progess">
         <div
         className="progress-bar progress-bar-striped mt-2"
@@ -110,11 +96,9 @@ export default function AddArticle() {
             {`uploading image ${progress}%`}
         </div>
     </div>
-)}
-    
+)} 
         <button className='form-control-btn'onClick={handlePublish}>Publish</button>
     </div>
-
   )
 }
 
