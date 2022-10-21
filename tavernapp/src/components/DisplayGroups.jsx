@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, { useState, useEffect } from 'react'
 import { db } from '../firebaseConfig';
@@ -22,7 +23,7 @@ export default function Groups() {
         <div>
             {groups.length === 0 ? (
                     <p>No groups found!</p>
-                ) : ( groups.map(({id, group, description, imageUrl, createdAt}) => (
+                ) : ( groups.map(({id, group, description, imageUrl, createdAt,joinGroup}) => (
                     <div key={id}>
                         <div>
                             <div>
@@ -32,6 +33,7 @@ export default function Groups() {
                                 <h2>{group}</h2>
                                 <p>{createdAt.toDate().toDateString()}</p>
                                 <h4>{description}</h4>
+                                <Button>{joinGroup}</Button>
                             </div>
                         </div>
                     </div> 
