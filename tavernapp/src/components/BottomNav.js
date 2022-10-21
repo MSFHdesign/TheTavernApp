@@ -12,7 +12,7 @@ import messages from '../images/messages.png';
 export default function BottomNav() {
     return (
 
-        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', position: 'sticky', }}>
+        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', position: 'sticky', bottom: 0, border: '1px solid white' ,backgroundColor: '#f2f2f2', paddingTop: 1, zIndex: 10000 }}>
 
         <Link to="/communities">
           <img src={community} alt="Community icon" style={{height: "30px"}}/>

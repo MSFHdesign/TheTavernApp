@@ -1,7 +1,5 @@
 import {useState} from 'react';
 import { Button, Box, Typography, } from '@mui/material';
-import SelectUnstyled from '@mui/base/SelectUnstyled';
-import OptionUnstyled from '@mui/base/OptionUnstyled';
 
 const App = () => {
   const [num, setNum] = useState(0);
@@ -13,7 +11,7 @@ const App = () => {
   
 
   const handleClick = () => {
-    setNum(randomNumberInRange(1, 2));
+    setNum(randomNumberInRange(1, 20));
   };
  
 
@@ -25,10 +23,7 @@ const App = () => {
     
     <br/>
 
-      <SelectUnstyled className='Value' defaultValue={10}> 
-      <OptionUnstyled value={1}>{1}</OptionUnstyled>
-      <OptionUnstyled>{2}</OptionUnstyled>
-    </SelectUnstyled>
+   
 
     </Box>
   );

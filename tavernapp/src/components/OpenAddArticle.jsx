@@ -20,8 +20,12 @@ const style = {
 };
 
 const BtnStyle = {
-    color: 'red',
-    border: '2px solid red'
+    color: 'white',
+    border: '2px solid #f2f2f2',
+    '&:hover': {
+        backgroundColor: 'gray',
+        color: 'white',
+    }
 }
 
 export default function KeepMountedModal() {
@@ -30,8 +34,8 @@ export default function KeepMountedModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <Button onClick={handleOpen} sx={BtnStyle}>Open modal</Button>
+    <Box sx={{marginTop: 2,}}>
+      <Button onClick={handleOpen} sx={BtnStyle}>Tilføj post</Button>
       <Modal
         keepMounted
         open={open}
@@ -46,6 +50,6 @@ export default function KeepMountedModal() {
           </Typography>
         </Box>
       </Modal>
-    </div>
+    </Box>
   );
 }

@@ -4,7 +4,7 @@ import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage"
 import {storage, db} from "../firebaseConfig"
 import {toast} from "react-toastify"
 import "./AddMessage.css"
-
+import { Button } from '@mui/material'
 export default function AddMessage() {
     const [formData, setFormData] =useState({
         Title:"",
@@ -99,11 +99,11 @@ export default function AddMessage() {
         <div
         className="progress-bar progress-bar-striped mt-2"
         style={{width: `${progress}%` }}>
-            {`uploading image ${progress}%`}
+            {`besked sendes ${progress}`}
         </div>
     </div>
 )} 
-        <button className='form-control-btn'onClick={handlePublish}>Publish</button>
+        <Button sx={{border: '2px solid red', marginTop: 4}} className='form-control-btn'onClick={handlePublish}>Send besked</Button>
     </div>
   )
 }

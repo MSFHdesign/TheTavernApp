@@ -20,7 +20,7 @@ export default function Messages() {
 
 
         <Box sx={ContainerStyle}> 
-            <Typography variant ='h2' sx={{fontSize: 50, }}>
+            <Typography variant ='h2' sx={{fontSize: 50, color: '#f2f2f2'}}>
                 Beskeder
             </Typography>
             
