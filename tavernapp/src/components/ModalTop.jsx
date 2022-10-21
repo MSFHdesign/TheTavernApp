@@ -14,7 +14,7 @@ const style = {
   right: '10%',
  
   width: '50%',
-  bgcolor: 'background.paper',
+  bgcolor: 'brown',
   border: 'red',
   boxShadow: 10,
   p: 4,

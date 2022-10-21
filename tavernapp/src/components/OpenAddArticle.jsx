@@ -30,7 +30,7 @@ export default function KeepMountedModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <Box sx={{marginTop: 2,}}>
       <Button onClick={handleOpen} sx={BtnStyle}>Open modal</Button>
       <Modal
         keepMounted
@@ -46,6 +46,6 @@ export default function KeepMountedModal() {
           </Typography>
         </Box>
       </Modal>
-    </div>
+    </Box>
   );
 }
