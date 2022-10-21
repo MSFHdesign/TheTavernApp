@@ -8,12 +8,11 @@ const StyledProfilPictur = {
     borderRadius: '50%',
     width: '50px',
     height: '50px',
+    objectFit: 'fill',
       backgroundImage: `url(${background})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: '50px 50px',
     backgroundColor: 'white',
-
-
 }
 
 

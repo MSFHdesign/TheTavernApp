@@ -14,10 +14,8 @@ const ContainerStyle = {
 export default function Dice() {
     return (
         <Box sx= {ContainerStyle}>
-                <Typography variant='h2' sx={{fontSize: 50, }}>Dice generator</Typography>
+                <Typography variant='h2' sx={{fontSize: 50, color: '#f2f2f2' }}>Dice generator</Typography>
                 <Dices />
         </Box>
-
-
     )
 }

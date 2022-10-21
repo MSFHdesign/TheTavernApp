@@ -14,21 +14,21 @@ const style = {
   right: '10%',
  
   width: '50%',
-  bgcolor: 'brown',
+  bgcolor: 'white',
   border: 'red',
   boxShadow: 10,
   p: 4,
 };
 
 const btnStyled = {
-color: 'red',
+color: 'black',
 };
 
 
 const liStyled ={
-    color: 'red',
+    color: 'black',
     '&:hover': {
-        backgroundColor: 'red',
+        backgroundColor: 'gray',
         color: 'white',
     }
 }
@@ -48,7 +48,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: 'center', display: 'flex', alignItems: 'center'}}>
+          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: 'center', display: 'flex', alignItems: 'center', objectFit: 'fill',}}>
           <ProfilPic /> 
           <Box sx={{p:'0.2rem'}}/>
             <ProfilName /> 
