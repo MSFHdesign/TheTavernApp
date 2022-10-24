@@ -1,3 +1,4 @@
+
 .articles{
     width: 326px;
     display: block;
@@ -9,7 +10,7 @@
     margin-top: 50px;
     color: white;
     width: 326px;
-    border: 2px solid #A7915E;
+    border: var(--border);
     border-radius: 26px;
     padding-top: 20px;
 }
