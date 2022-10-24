@@ -3,7 +3,6 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import {db} from "../firebaseConfig";
 import DeleteMessages from './DeleteMessage';
-import "./Message.css"
 
 export default function DisplayMessages() {
     const [Messages, SetMessages] = useState([]);

@@ -48,7 +48,8 @@ export default function Communities() {
         else if(word==='Location') {
             const filtered = Communities.filter(item=>item.tags==='location');
             setState(filtered);
-        }
+            console.log(filtered);
+        } 
     };
 
     useEffect(()=>{
@@ -58,7 +59,6 @@ export default function Communities() {
             const communities = snapshot.docs.map((doc) =>({
             id: doc.id,
             ...doc.data(),}));
-            setState(communities);
             SetCommunities(communities);
             console.log(communities);
         });
@@ -66,7 +66,7 @@ export default function Communities() {
     },[]);
 
   return (
-    <Box sx={{minHeight: '100vh'}} className='communities'>
+    <Box sx={{minHeight: '100vh',pt:'60px',pb:'60px'}} className='communities'>
         <h2>Communities</h2>
         <div className='btns'>
             <button value="Alle" onClick={handleBtns}>Alle</button>
