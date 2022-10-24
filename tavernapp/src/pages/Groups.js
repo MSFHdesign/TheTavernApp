@@ -20,7 +20,7 @@ export default function Groups() {
 
 
         <Box sx={ContainerStyle}> 
-            <Typography variant ='h2' sx={{fontSize: 50, color: '#f2f2f2'}}>
+            <Typography variant ='h2' sx={{fontSize: 50, color: '#f2f2f2',pt:'60px'}}>
                 Groups
             </Typography>
             
