@@ -2,13 +2,29 @@ import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import {db} from "../firebaseConfig";
 import { Box } from '@mui/material';
-
+import './Communities.css';
 
 
 export default function Communities() {
     const [Communities, SetCommunities] = useState([
         
     ]);
+
+    function FancyButton ()  {
+        const [active, setActive] = useState(false);
+        const handleClick = () => {
+        setActive(!active);
+        };
+
+    return (
+        <div className="container">
+        <button className={ active ? "active" : "btn"} onClick={handleClick}>
+            { active ? "Følger" : "Følg"}
+        </button>
+        </div>
+        );
+    }
+
 
     const [state, setState] = useState(Communities);
 
@@ -32,7 +48,8 @@ export default function Communities() {
         else if(word==='Location') {
             const filtered = Communities.filter(item=>item.tags==='location');
             setState(filtered);
-        }
+            console.log(filtered);
+        } 
     };
 
     useEffect(()=>{
@@ -42,6 +59,7 @@ export default function Communities() {
             const communities = snapshot.docs.map((doc) =>({
             id: doc.id,
             ...doc.data(),}));
+            setState(communities);
             SetCommunities(communities);
             console.log(communities);
         });
@@ -49,7 +67,7 @@ export default function Communities() {
     },[]);
 
   return (
-    <Box sx={{minHeight: '100vh'}} className='communities'>
+    <Box sx={{minHeight: '100vh', minWidth: '100vw',pt:'60px',pb:'60px', display: 'flex',flexDirection:'column', alignItems: 'center', justifyContent: 'space-evenly'}} className='communities'>
         <h2>Communities</h2>
         <div className='btns'>
             <button value="Alle" onClick={handleBtns}>Alle</button>
@@ -68,10 +86,10 @@ export default function Communities() {
                          <div className={!item.imageUrl ? "noimg" : "img"}>
                              <img src = {item.imageUrl} alt="title" />
                          </div>
-                         <h2>{item.title}</h2>
-                         <p>{item.createdAt.toDate().toDateString()}</p>
-                         <h4>{item.description}</h4>
-                         <p>{item.tags}</p>
+                         <h2>{item.title}</h2>  
+                         <h4>{item.description}</h4>                           
+                         <FancyButton  />
+                         <p>#{item.tags}</p>
                      </div>
                 </div>
                 ))
@@ -79,4 +97,3 @@ export default function Communities() {
     </Box>
   )
 }
-// Lav en button, der lagrer værdi for tags i en variabel. Brug if-statement til at sammenligne den tag-værdi med community item's tag. Er det true, så filtrer.

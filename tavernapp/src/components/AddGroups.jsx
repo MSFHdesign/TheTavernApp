@@ -60,11 +60,12 @@ export default function AddGroups() {
                 createdAt: Timestamp.now().toDate(),
             })
             .then(() => {
-                toast("Group created successfully", { type: "success"});
-                setProgress(0);
+                toast("Group created successfully", { type: "success"})
+                setProgress(0)
             })
-            .catch((err) => {
-                toast("Error creating group", { type: "error"});
+            .catch((error) => {
+                toast("Error creating group", { type: "error"})
+                console.log(error)
             });
         });
     }   
@@ -73,7 +74,7 @@ export default function AddGroups() {
 };
 
     return (
-    <div style={{position: "fixed"}}>
+    <div>
         <h2>Create group</h2>
         <label htmlFor="">Group Name</label>
         <input 
@@ -88,10 +89,10 @@ export default function AddGroups() {
         <textarea 
             name="description" 
             value={formData.description} 
-            cols="30" 
-            rows="10">
+            cols="" 
+            rows=""
             onChange={(e)=>handleChange(e)}
-        </textarea>
+        />
 
             {/* image */}
         <label htmlFor="">Image</label>

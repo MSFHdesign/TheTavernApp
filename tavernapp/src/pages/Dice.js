@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Hidden, Typography } from '@mui/material'
 import React from 'react'
 
 import Dices from '../components/Dices.jsx';
@@ -14,7 +14,7 @@ const ContainerStyle = {
 export default function Dice() {
     return (
         <Box sx= {ContainerStyle}>
-                <Typography variant='h2' sx={{fontSize: 50, color: '#f2f2f2' }}>Dice generator</Typography>
+                <Typography variant='h2' sx={{fontSize: 50, color: '#f2f2f2',pt:'60px' }}>Dice generator</Typography>
                 <Dices />
         </Box>
     )

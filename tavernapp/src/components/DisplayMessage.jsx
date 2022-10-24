@@ -3,7 +3,6 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import {db} from "../firebaseConfig";
 import DeleteMessages from './DeleteMessage';
-import "./Message.css"
 
 export default function DisplayMessages() {
     const [Messages, SetMessages] = useState([]);
@@ -27,18 +26,18 @@ export default function DisplayMessages() {
                 <p>No Messages found!</p>
             ) : (
                 Messages.map(({id,Title,Description,createdAt,SentBy,Group}) => (
-                <Box sx={{m: 2, p: 1, backgroundColor: 'whitesmoke' }} className = 'Message' key = {id}>
+                <Box sx={{m: 2,mt:4, p: 1, backgroundColor: 'hsl(0, 0%, 0%, 0.40)', borderRadius:'26px',border: 'var(--border)' }} className = 'Message' key = {id}>
                     <div className='text'>
-                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',}}>{Title} sent to {Group} 
+                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',pt:2, color:'whitesmoke'}}>{Title} sent to {Group} 
                         
                         </Typography>
                         
-                        <Typography variant ='p' sx={{textDecoration: 'underline', fontSize: 14, mb: 2}}>
+                        <Typography variant ='p' sx={{textDecoration: 'underline', fontSize: 14, mb: 2, color:'whitesmoke'}}>
                             Sent by: {SentBy} {createdAt.toDate().toDateString() }
                         <br/>
                         </Typography>
                         
-                        <Typography variant ='p' sx={{fontSize: 20, pt: 2, pb: '22px',}}>{Description}</Typography>
+                        <Typography variant ='p' sx={{fontSize: 20, pt: 2, pb: '22px', color:'whitesmoke'}}>{Description}</Typography>
                         
                         <DeleteMessages id={id}/>
                         </div>

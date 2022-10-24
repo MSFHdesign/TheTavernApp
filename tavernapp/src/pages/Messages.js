@@ -20,11 +20,11 @@ export default function Messages() {
 
 
         <Box sx={ContainerStyle}> 
-            <Typography variant ='h2' sx={{fontSize: 50, color: '#f2f2f2'}}>
+            <Typography variant ='h2' sx={{fontSize: 50, color: '#f2f2f2',pt:'60px',}}>
                 Beskeder
             </Typography>
             
-            <Box sx={{ m: 1, display: 'flex', }}>
+            <Box sx={{ m: 1, display: 'flex', borderRadius:'26px',pb:'60px' }}>
                 <DisplayMessages/>
             </Box>
             <BoxAddMessage/>
