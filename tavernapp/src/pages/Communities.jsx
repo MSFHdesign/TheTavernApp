@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import {db} from "../firebaseConfig";
+import { Box } from '@mui/material';
 
 
 
 export default function Communities() {
-    const [Communities, SetCommunities] = useState([]);
+    const [Communities, SetCommunities] = useState([
+        
+    ]);
 
     const [state, setState] = useState(Communities);
 
     const handleBtns =(e)=> {
-        let word=e.target.value;
+        let word=e.target.value 
         if(word==='Alle') {
             setState(Communities)
         }
@@ -46,7 +49,7 @@ export default function Communities() {
     },[]);
 
   return (
-    <div className='communities'>
+    <Box sx={{minHeight: '100vh'}} className='communities'>
         <h2>Communities</h2>
         <div className='btns'>
             <button value="Alle" onClick={handleBtns}>Alle</button>
@@ -73,7 +76,7 @@ export default function Communities() {
                 </div>
                 ))
         )}
-    </div>
+    </Box>
   )
 }
 // Lav en button, der lagrer værdi for tags i en variabel. Brug if-statement til at sammenligne den tag-værdi med community item's tag. Er det true, så filtrer.
