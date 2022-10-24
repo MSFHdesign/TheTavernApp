@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import {db} from "../firebaseConfig";
 import { Box } from '@mui/material';
-import '../styles/Btn.css';
+import './Communities.css';
 
 
 export default function Communities() {
@@ -18,7 +18,7 @@ export default function Communities() {
 
     return (
         <div className="container">
-        <button className='UserBtns btn' sx={{ mt: 1, mr: 1, width: '50%'}} type="submit" variant="outlined" onClick={handleClick}>
+        <button className={ active ? "active" : "btn"} onClick={handleClick}>
             { active ? "Følger" : "Følg"}
         </button>
         </div>
@@ -67,7 +67,7 @@ export default function Communities() {
     },[]);
 
   return (
-    <Box sx={{minHeight: '100vh',pt:'60px',pb:'60px'}} className='communities'>
+    <Box sx={{minHeight: '100vh', minWidth: '100vw',pt:'60px',pb:'60px', display: 'flex',flexDirection:'column', alignItems: 'center', justifyContent: 'space-evenly'}} className='communities'>
         <h2>Communities</h2>
         <div className='btns'>
             <button value="Alle" onClick={handleBtns}>Alle</button>
@@ -86,8 +86,9 @@ export default function Communities() {
                          <div className={!item.imageUrl ? "noimg" : "img"}>
                              <img src = {item.imageUrl} alt="title" />
                          </div>
-                         <h2>{item.title}</h2>                            
-                         <FancyButton />
+                         <h2>{item.title}</h2>  
+                         <h4>{item.description}</h4>                           
+                         <FancyButton  />
                          <p>#{item.tags}</p>
                      </div>
                 </div>
