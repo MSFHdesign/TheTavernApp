@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import {db} from "../firebaseConfig";
 import { Box } from '@mui/material';
-import '../styles/Btn.css'
+import '../styles/Btn.css';
 
 
 export default function Communities() {
