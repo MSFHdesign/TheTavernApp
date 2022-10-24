@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import {db} from "../firebaseConfig";
 import { Box } from '@mui/material';
+import JoinCommunity from '../components/JoinCommunity';
 
 
 
@@ -71,7 +72,8 @@ export default function Communities() {
                          <h2>{item.title}</h2>
                          <p>{item.createdAt.toDate().toDateString()}</p>
                          <h4>{item.description}</h4>
-                         <p>{item.tags}</p>
+                         <JoinCommunity />
+                         <p>#{item.tags}</p>
                      </div>
                 </div>
                 ))
