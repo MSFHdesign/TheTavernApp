@@ -27,9 +27,9 @@ export default function DisplayMessages() {
                 <p>No Messages found!</p>
             ) : (
                 Messages.map(({id,Title,Description,createdAt,SentBy,Group}) => (
-                <Box sx={{m: 2, p: 1, backgroundColor: 'whitesmoke' }} className = 'Message' key = {id}>
+                <Box sx={{m: 2,mt:4, p: 1, backgroundColor: 'whitesmoke', borderRadius:'26px' }} className = 'Message' key = {id}>
                     <div className='text'>
-                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',}}>{Title} sent to {Group} 
+                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',pt:2}}>{Title} sent to {Group} 
                         
                         </Typography>
                         
