@@ -59,6 +59,7 @@ export default function Communities() {
             const communities = snapshot.docs.map((doc) =>({
             id: doc.id,
             ...doc.data(),}));
+            setState(communities);
             SetCommunities(communities);
             console.log(communities);
         });
