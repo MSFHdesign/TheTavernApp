@@ -37,16 +37,23 @@ export default function InputAdornments() {
     event.preventDefault();
   };
 
+  const StyleBtns = {
+    m:1,
+    width: '90%',
+    color: 'var(--btnColor)',
+    
+  }
+
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
         <Typography variant='h4' > Log ind </Typography>
-      <div>
-      <TextField sx={{m:1, width: '90%', color: 'white'}}
+     <form>
+      <TextField sx={StyleBtns}
         helperText="Rasmus The Reactor"
         id="demo-helper-text-misaligned"
         label="Brugernavn"
       />
-        <FormControl sx={{ m: 1, width: '90%',color: 'white' }} variant="outlined">
+        <FormControl sx={StyleBtns} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -70,21 +77,23 @@ export default function InputAdornments() {
 
 
 
-        <Box sx={{display: 'inline-flex', justifyContent: 'space-between',}}>
-        <Button className='UserBtns btn' sx={{ mt: 1, mr: 1, width: '50%', color: 'white'}} type="submit" variant="outlined">
-         Hjælp
+      
+        </FormControl>
+        
+        <Box sx={{
+          display: 'flex', justifyContent: 'space-between', marginTop: '50px'
+          }}>
+        <Button className='UserBtns btn' sx={{border: 'var(--border)', mt: 1, mr: 1, width: '50%', color: 'var(--btnColor)'}} type="submit" variant="outlined">
+         Glemt?
         </Button>
-        <Link to="/home">   <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%',color: 'white' }} type="submit" variant="outlined">
+        <Link to="/home">   <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%',color: 'white', backgroundColor: 'var(--btnColor)', border: 'var(--border)' }} type="submit" variant="outlined">
           Logind
         </Button></Link>
 
         </Box>
-        </FormControl>
-        
-        
 
-
-      </div>
+</form>
+   
     </Box>
   );
 }
