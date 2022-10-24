@@ -60,11 +60,12 @@ export default function AddGroups() {
                 createdAt: Timestamp.now().toDate(),
             })
             .then(() => {
-                toast("Group created successfully", { type: "success"});
-                setProgress(0);
+                toast("Group created successfully", { type: "success"})
+                setProgress(0)
             })
-            .catch((err) => {
-                toast("Error creating group", { type: "error"});
+            .catch((error) => {
+                toast("Error creating group", { type: "error"})
+                console.log(error)
             });
         });
     }   
