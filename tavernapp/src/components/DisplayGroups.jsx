@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, { useState, useEffect } from 'react'
 import { db } from '../firebaseConfig';
+import DeleteGroup from './DeleteGroup';
 
 
 export default function Groups() {
@@ -33,7 +34,8 @@ export default function Groups() {
                                 <h2>{group}</h2>
                                 <p>{createdAt.toDate().toDateString()}</p>
                                 <h4>{description}</h4>
-                                <Button>Join now  {joinGroup}</Button>
+                                <Button> Join Group {joinGroup}</Button>
+                                <DeleteGroup id={id} imageUrl={imageUrl}/>
                             </div>
                         </div>
                     </div> 
