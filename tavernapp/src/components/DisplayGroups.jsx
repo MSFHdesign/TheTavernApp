@@ -24,7 +24,7 @@ export default function Groups() {
         <div>
             {groups.length === 0 ? (
                     <p>No groups found!</p>
-                ) : ( groups.map(({id, group, description, imageUrl, createdAt,joinGroup}) => (
+                ) : ( groups.map(({id, group, description, imageUrl, createdAt, joinGroup}) => (
                     <div key={id}>
                         <div>
                             <div>
