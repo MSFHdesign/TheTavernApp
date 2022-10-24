@@ -41,12 +41,12 @@ export default function InputAdornments() {
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
         <Typography variant='h4' > Log ind </Typography>
       <div>
-      <TextField sx={{m:1, width: '90%'}}
+      <TextField sx={{m:1, width: '90%', color: 'white'}}
         helperText="Rasmus The Reactor"
         id="demo-helper-text-misaligned"
         label="Brugernavn"
       />
-        <FormControl sx={{ m: 1, width: '90%' }} variant="outlined">
+        <FormControl sx={{ m: 1, width: '90%',color: 'white' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -71,10 +71,10 @@ export default function InputAdornments() {
 
 
         <Box sx={{display: 'inline-flex', justifyContent: 'space-between',}}>
-        <Button className='UserBtns btn' sx={{ mt: 1, mr: 1, width: '50%'}} type="submit" variant="outlined">
+        <Button className='UserBtns btn' sx={{ mt: 1, mr: 1, width: '50%', color: 'white'}} type="submit" variant="outlined">
          Hjælp
         </Button>
-        <Link to="/home">   <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%' }} type="submit" variant="outlined">
+        <Link to="/home">   <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%',color: 'white' }} type="submit" variant="outlined">
           Logind
         </Button></Link>
 

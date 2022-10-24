@@ -10,12 +10,18 @@ import CreateUser from '../components/CreateUser.jsx';
 
 export default function Login() {
   return (
-    <Box sx={{ height: '100vh', }}>
-        <Typography variant="h1" color="initial" sx={{fontSize: '3rem', textAlign: 'center', pt: 2, pb: 2,}}>The Tavnern</Typography>
-      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
+    <Box sx={{ height: '100vh',  }}>
+       
+        <Typography variant="h1" color="initial" sx={{fontSize: 'var(--H1Size)', textAlign: 'center', pt: 2, pb: 2, color: 'white'}}>
+          The Tavnern
+        </Typography>
+
+          <Box sx={{ marginTop: '100px',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--gap)',
+            }}>
             <LoginUser />
             <CreateUser />
-      </Box>
+          </Box>
     </Box>
 
 
