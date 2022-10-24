@@ -24,7 +24,7 @@ export default function Messages() {
                 Beskeder
             </Typography>
             
-            <Box sx={{ m: 1, display: 'flex', }}>
+            <Box sx={{ m: 1, display: 'flex', borderRadius:'26px' }}>
                 <DisplayMessages/>
             </Box>
             <BoxAddMessage/>

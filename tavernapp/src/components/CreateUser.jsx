@@ -19,6 +19,13 @@ const style = {
   p: 4,
 };
 
+const BtnStyle = {
+  border: '2px solid var(--btnColor)',
+  color: 'var(--btnColor)',
+  backgroundColor: 'var(--bgColor)',
+  width: 'var(--btnWidth)',
+  borderRadius: 'var(--btradius)'
+}
 
 
 export default function CreateUser() {
@@ -29,7 +36,7 @@ export default function CreateUser() {
   
     return (
       <div>
-        <Button className='UserBtns btn' onClick={handleOpen}>Opret bruger</Button>
+        <Button sx={BtnStyle} className='UserBtns btn' onClick={handleOpen}>Opret bruger</Button>
         <Modal
           keepMounted
           open={open}
