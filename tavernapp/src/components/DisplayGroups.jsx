@@ -33,7 +33,7 @@ export default function Groups() {
                                 <h2>{group}</h2>
                                 <p>{createdAt.toDate().toDateString()}</p>
                                 <h4>{description}</h4>
-                                <Button>{joinGroup}</Button>
+                                <Button>Join now  {joinGroup}</Button>
                             </div>
                         </div>
                     </div> 

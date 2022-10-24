@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-
+import AddGroups from '../components/AddGroups'
 import DisplayGroups from '../components/DisplayGroups'
 
 
@@ -27,7 +27,9 @@ export default function Groups() {
             <Box sx={{ m: 1, display: 'flex', }}>
                 <DisplayGroups/>
             </Box>
-            
+            <Box sx={{ m: 1, display: 'flex', }}>
+                <AddGroups/>
+            </Box>
            
 
 
