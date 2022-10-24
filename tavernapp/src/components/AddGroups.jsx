@@ -88,10 +88,10 @@ export default function AddGroups() {
         <textarea 
             name="description" 
             value={formData.description} 
-            cols="30" 
-            rows="10">
+            cols="" 
+            rows=""
             onChange={(e)=>handleChange(e)}
-        </textarea>
+        />
 
             {/* image */}
         <label htmlFor="">Image</label>
