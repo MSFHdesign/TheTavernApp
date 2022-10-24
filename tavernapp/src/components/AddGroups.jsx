@@ -73,7 +73,7 @@ export default function AddGroups() {
 };
 
     return (
-    <div style={{position: "fixed"}}>
+    <div>
         <h2>Create group</h2>
         <label htmlFor="">Group Name</label>
         <input 
