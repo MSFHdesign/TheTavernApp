@@ -10,7 +10,7 @@ const ContainerStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-
+    gap: 'var(--Gap)'
 
 }
 
@@ -20,11 +20,11 @@ export default function Messages() {
 
 
         <Box sx={ContainerStyle}> 
-            <Typography variant ='h2' sx={{fontSize: 50, color: '#f2f2f2',pt:'60px',}}>
+            <Typography variant ='h2' sx={{fontSize: 50, color: 'var(--H2Color)',pt:'60px',}}>
                 Beskeder
             </Typography>
             
-            <Box sx={{ m: 1, display: 'flex', borderRadius:'26px',pb:'60px' }}>
+            <Box sx={{ m: 1, display: 'flex', borderRadius:'26px',pb:'calc(var(--addbtnSize) + 10%)' }}>
                 <DisplayMessages/>
             </Box>
             <BoxAddMessage/>

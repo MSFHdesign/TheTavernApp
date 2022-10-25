@@ -14,8 +14,8 @@ const style = {
   right: '10%',
  
   width: '50%',
-  bgcolor: 'white',
-  border: 'red',
+  bgcolor: 'var(--BgPop)',
+  border: 'var(--border)',
   boxShadow: 10,
   p: 4,
 };
@@ -26,7 +26,8 @@ color: 'black',
 
 
 const liStyled ={
-    color: 'black',
+    color: 'var(--P)',
+    fontSize: 'var(--Psize)',
     '&:hover': {
         backgroundColor: 'gray',
         color: 'white',

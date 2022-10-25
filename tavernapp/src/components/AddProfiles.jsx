@@ -5,6 +5,8 @@ import {storage, db} from "../firebaseConfig"
 import {toast} from "react-toastify"
 import "./AddProfile.css"
 
+
+
 export default function AddProfile() {
     const [formData, setFormData] =useState({
         Username:"",
@@ -85,25 +87,24 @@ export default function AddProfile() {
 }
   return (
     <div className='form'>
-        <h2>Add a Profile</h2>
-        <label htmlFor="">Username</label>
-        <input type="text" name='Username' className='form-control' value={formData.Username} onChange={(e)=> handleChange(e)} />
-        
-        {/* Password*/}
-        <label htmlFor="">Password</label>
-        <input type="password" name='Password' className='form-control' value={formData.Password} onChange={(e)=> handleChange(e)}/>
+        <h2>Tilføj en profil</h2>
+        <label htmlFor="">Bruger navn:</label>
+        <input type="text" name='Username' placeholder='Brugernavn:' className='form-control' value={formData.Username} onChange={(e)=> handleChange(e)} />
 
-        <label htmlFor="">profilepic</label>
+        <label htmlFor="">Password:</label>
+        <input type="password" name='Password' placeholder='Password:' className='form-control' value={formData.Password} onChange={(e)=> handleChange(e)}/>
+
+        <label htmlFor="">Profile billede:</label>
         <input type="file" name="profilepic" accept="image/*" className="form-control" id="imgInput" onChange={(e)=> handleImageChange(e)}/>
 
-        <label htmlFor="">Name</label>
-        <input type="text" name='Name' className='form-control' value={formData.Name} onChange={(e)=> handleChange(e)} />
+        <label htmlFor="">Navn:</label>
+        <input type="text" name='Name' placeholder='Fuldenavn:' className='form-control' value={formData.Name} onChange={(e)=> handleChange(e)} />
         
-        <label htmlFor="">Age</label>
-        <input type="number" name='Age' className='form-control' value={formData.Age} onChange={(e)=> handleChange(e)} />
+        <label htmlFor="">Alder:</label>
+        <input type="number" name='Age' placeholder='Alder: ' className='form-control' value={formData.Age} onChange={(e)=> handleChange(e)} />
 
-        <label htmlFor="">City</label>
-        <input type="text" name='City' className='form-control' value={formData.City} onChange={(e)=> handleChange(e)} />
+        <label htmlFor="">By:</label>
+        <input type="text" name='City' placeholder='By:' className='form-control' value={formData.City} onChange={(e)=> handleChange(e)} />
 
 {progress === 0 ? null :(
     <div className="progess">

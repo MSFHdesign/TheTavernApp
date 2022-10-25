@@ -14,13 +14,13 @@ import { Box, Typography,  } from '@mui/material'
 export default function Home() {
     return(
     
-    <div className="App">
+    <Box className="App" sx={{minHeight: '100vh',}}>
 
     <body>
-  <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
+  <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', }}>
   <ProfilPic /> <Box sx={{p:'0.5rem'}}/>
   <Box> 
-  <Typography sx={{color: 'white'}}> Velkommen</Typography>
+  <Typography sx={{fontSize: 50, color: 'var(--H2Color)'}}> Velkommen</Typography>
   <ProfilName />
   </Box>
   </Box>
@@ -42,5 +42,5 @@ export default function Home() {
   
 
 
-  </div>
+  </Box>
     )}

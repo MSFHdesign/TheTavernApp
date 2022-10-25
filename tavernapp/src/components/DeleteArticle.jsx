@@ -21,7 +21,7 @@ export default function DeleteArticle({id, imageUrl}) {
     }
   return (
     <div>
-        <Button className='deletebtn' onClick={handleDelete} sx={{border: '2px solid red', marginTop: 2,}}>Delete</Button>
+        <Button className='deletebtn' onClick={handleDelete} sx={{backgroundColor: 'var(--Delete)', color: 'var(--DeleteColor)', border: 'var(--DeleteBorder)', marginTop: 2,}}>Slet</Button>
     </div>
   )
 }

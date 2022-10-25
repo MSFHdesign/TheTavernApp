@@ -8,11 +8,17 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 
 const style3 = {
+  color: 'var(--addBtnColor)',
+  width: 'var(--addbtnSize)',
+  height: 'var(--addbtnSize)',
+  backgroundColor: 'var(--addBtnBGColor)',
   position: 'fixed',
-  bottom: '8%',
-  border: '2px solid #000',
+    bottom: '8%',
+    left: '40%',
+  border: 'var(--addBtnBorder)',
   boxShadow: 24,
   p: 4,
+  m: 0,
 };
 
 const style1 = {

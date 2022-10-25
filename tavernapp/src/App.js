@@ -9,7 +9,7 @@ import Dice from './pages/Dice';
 import Home from './pages/Home'
 import Login from './pages/Login';
 import TopNav from './components/TopNav';
-
+import Fejl404 from './pages/fejl404';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
     <Route path='/login' element={<Login />} />
     <Route path='/' element={<Home/>}/>
     <Route path='*' element={<Home/>}/>
-
+    <Route path='/404' element ={<Fejl404/>} />
     <Route path='/communities' element={<Communities/>}/>
     <Route path='/groups' element={<Groups/>}/>
     <Route path='/messages' element={<Messages/>}/>
