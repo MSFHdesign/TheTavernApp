@@ -19,6 +19,24 @@ export default function Groups() {
        console.log(groups);
     });
     },[]);
+    
+    function Member ()  {
+        const [active, setActive] = useState(false);
+        const joinClick = () => {
+        setActive(!active);
+        };
+
+        const [counterState, setCounterState] = useState(0);
+        const incrementCounter = () => setCounterState(counterState + 1)
+
+    return (
+        <div>
+        <h4 onClick={joinClick}> Medlemmer i gruppen: </h4>
+        <Button onClick={joinClick}>
+            { active ? "Forlad gruppe" : "Bliv medlem"} </Button>
+        </div>
+        );
+    }
 
     return (
         <div>
@@ -35,7 +53,8 @@ export default function Groups() {
                                 <p>{createdAt.toDate().toDateString()}</p>
                                 <h4>{description}</h4>
                                 <h4> Maximum group members: {numberOfPeople}</h4>
-                                <Button> Join Group {joinGroup}</Button>
+                                {/*<h4> Medlemmer i gruppen: {incrementCounter}</h4>*/}
+                                <Member></Member>
                                 <DeleteGroup id={id} imageUrl={imageUrl}/>
                             </div>
                         </div>
