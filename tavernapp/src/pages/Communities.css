@@ -6,6 +6,10 @@
     color: var(--H2);
 }
 
+.communities > h2 {
+    padding: 0.8em;
+}
+
 .single-community{
     background-color: hsl(0, 0%, 0%, 0.40);
     margin-top: 50px;
@@ -41,10 +45,31 @@
 .text h4{
     font-weight: 400;
 }
+.btns {
+    width: 80vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.btns > button {
+    color: white;
+    border: 2px solid #f2f2f2;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 6px 8px;
+    border-radius: 4px;
+    min-width: 64px;
+}
 .btn {
     color: white;
     border: 2px solid #f2f2f2;
     background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
     padding: 6px 8px;
     border-radius: 4px;
     min-width: 64px;
@@ -53,6 +78,8 @@
 .active {
     background-color: gray;
     color: white;  
+    text-transform: uppercase;
+    font-weight: 500;
     border: 2px solid #f2f2f2;
     padding: 6px 8px;
     border-radius: 4px;

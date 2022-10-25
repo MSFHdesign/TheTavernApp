@@ -89,7 +89,6 @@ export default function Communities() {
                          <h2>{item.title}</h2>  
                          <h4>{item.description}</h4>                           
                          <FancyButton  />
-                         <p>#{item.tags}</p>
                      </div>
                 </div>
                 ))
