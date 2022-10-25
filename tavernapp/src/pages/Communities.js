@@ -4,6 +4,9 @@ import {db} from "../firebaseConfig";
 import { Box } from '@mui/material';
 import './Communities.css';
 
+import { Typography } from '@mui/material'
+
+
 
 export default function Communities() {
     const [Communities, SetCommunities] = useState([
@@ -68,7 +71,7 @@ export default function Communities() {
 
   return (
     <Box sx={{minHeight: '100vh', minWidth: '100vw',pt:'60px',pb:'60px', display: 'flex',flexDirection:'column', alignItems: 'center', justifyContent: 'space-evenly'}} className='communities'>
-        <h2>Communities</h2>
+        <Typography variant='h2' sx={{fontSize: 50, color: 'var(--H2Color)'}}>Communities</Typography>
         <div className='btns'>
             <button value="Alle" onClick={handleBtns}>Alle</button>
             <button value="Class" onClick={handleBtns}>Class</button>

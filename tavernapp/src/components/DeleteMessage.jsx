@@ -21,7 +21,7 @@ export default function DeleteMessage({id, imageUrl}) {
   }
 return (
   <div>
-      <Button sx={{border: '2px solid red', backgroundColor: 'red', mt: 2, color: 'white'}} className='deletebtn' onClick={handleDelete}>Delete</Button>
+      <Button sx={{border: 'var(--DeleteBorder)', backgroundColor: 'var(--Delete)', mt: 2, color: 'var(--DeleteColor)'}} className='deletebtn' onClick={handleDelete}>Slet</Button>
   </div>
 )
 }
