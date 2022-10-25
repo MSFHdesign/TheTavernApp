@@ -15,7 +15,7 @@ const style3 = {
   position: 'fixed',
     bottom: '8%',
     left: '40%',
-  border: '2px solid #000',
+  border: 'var(--addBtnBorder)',
   boxShadow: 24,
   p: 4,
   m: 0,
