@@ -14,8 +14,17 @@ h2{
 }
 
 .form-control{
-    border: 1px solid black;
+    border: var(--border);
+
     
 }
+
+.form-control-btn {
+    border: var(--border);
+    width: 50%;
+    color: white;
+    background-color: var(--btnColor)
+}
+
 
 #imgInput{border: none;}

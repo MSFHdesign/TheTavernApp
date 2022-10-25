@@ -11,6 +11,8 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Typography, Button } from '@mui/material';
 
+import './styleFormForbtn.css'
+
 import {Link} from 'react-router-dom'
 
 export default function InputAdornments() {
@@ -40,29 +42,35 @@ export default function InputAdornments() {
   const StyleBtns = {
     m:1,
     width: '90%',
-    color: 'var(--btnColor)',
+    color: 'white',
+    backgroundColor: 'rgba(250,250,250,0.1)',
+    borderRadius: 4
     
   }
 
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        <Typography variant='h4' > Log ind </Typography>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', color: 'white', }}>
+        <Typography variant='h4' sx={{color: 'white'}} > Log ind </Typography>
      <form>
       <TextField sx={StyleBtns}
         helperText="Rasmus The Reactor"
         id="demo-helper-text-misaligned"
         label="Brugernavn"
+        placeholder='RasmusTheReactor'
       />
         <FormControl sx={StyleBtns} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
+          <InputLabel sx={{color: 'white', }} htmlFor="outlined-adornment-password">Password</InputLabel>
+          <OutlinedInput sx={{
+        '& > :not(style)': { color: 'white', border: 'var(--border)'
+        }, '&:active': {color: 'white'}
+      }}
+           id="outlined-password-input"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}
             endAdornment={
               <InputAdornment position="end">
-                <IconButton
+                <IconButton sx={{color: 'white'}}
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}

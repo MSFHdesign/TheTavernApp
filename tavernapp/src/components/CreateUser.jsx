@@ -8,12 +8,13 @@ import AddProfile from './AddProfiles'
 import '../styles/Btn.css';
 
 const style = {
+  color: 'white',
   position: 'absolute',
   width: '70%',
   height: '70%',
   top: '10%',
   left: '7%',
-  bgcolor: 'background.paper',
+  bgcolor: 'rgpa(0,0,0,0.8)',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,

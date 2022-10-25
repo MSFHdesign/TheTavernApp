@@ -1,0 +1,20 @@
+.MuiTextField-root {
+    border: var(--border);
+    color: white; 
+
+}
+.MuiInputBase-root {
+    border: var(--border);
+    color: white;
+} 
+#demo-helper-text-misaligned {
+    color: white;
+    
+}
+
+.MuiFormLabel-root {color: white;}
+.css-1pyl4ms-MuiFormControl-root-MuiTextField-root{color: white}
+
+
+.css-5ukp3i-MuiTypography-root {color: white;}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{color: white}
