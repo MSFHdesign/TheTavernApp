@@ -20,7 +20,7 @@ export default function Home() {
   <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
   <ProfilPic /> <Box sx={{p:'0.5rem'}}/>
   <Box> 
-  <Typography sx={{color: 'white'}}> Velkommen</Typography>
+  <Typography sx={{fontSize: 50, color: 'var(--H2Color)'}}> Velkommen</Typography>
   <ProfilName />
   </Box>
   </Box>

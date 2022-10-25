@@ -8,11 +8,14 @@
   --btradius: 26px;
   --Gap: 25px;
   --H1: #ffffff;
+  --H2Color: #ffffff;
   --H1Size: 3rem;
   --P: #f2f2f2;
   --H2: #f2f2f2;
   --H3: #f2f2f2;
-
+  --Delete: rgb(185, 0, 0);
+  --DeleteColor: rgba(250, 250, 250, 1);
+  --DeleteBorder: 2px solid #f2f2f2;
 }
 
 

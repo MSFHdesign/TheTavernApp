@@ -28,12 +28,12 @@ export default function DisplayMessages() {
                 Messages.map(({id,Title,Description,createdAt,SentBy,Group}) => (
                 <Box sx={{m: 2,mt:4, p: 1, backgroundColor: 'hsl(0, 0%, 0%, 0.40)', borderRadius:'26px',border: 'var(--border)' }} className = 'Message' key = {id}>
                     <div className='text'>
-                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',pt:2, color:'whitesmoke'}}>{Title} sent to {Group} 
+                        <Typography variant='h3' sx={{fontSize: '20px',textDecoration: 'bold',pt:2, color:'whitesmoke'}}>{Title}<br/> til:  {Group} 
                         
                         </Typography>
                         
                         <Typography variant ='p' sx={{textDecoration: 'underline', fontSize: 14, mb: 2, color:'whitesmoke'}}>
-                            Sent by: {SentBy} {createdAt.toDate().toDateString() }
+                            Sendt af: {SentBy} {createdAt.toDate().toDateString() }
                         <br/>
                         </Typography>
                         
