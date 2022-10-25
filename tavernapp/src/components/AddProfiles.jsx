@@ -5,6 +5,8 @@ import {storage, db} from "../firebaseConfig"
 import {toast} from "react-toastify"
 import "./AddProfile.css"
 
+
+
 export default function AddProfile() {
     const [formData, setFormData] =useState({
         Username:"",
