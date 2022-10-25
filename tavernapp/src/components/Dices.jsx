@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Button, Box, Typography, } from '@mui/material';
+import { Button, Box, Typography} from '@mui/material';
 
 const App = () => {
   const [num, setNum] = useState(0);
@@ -23,7 +23,9 @@ const App = () => {
 
   return (
     <Box>
-      <label>Vælg terning</label>
+     
+      <label> <Typography variant='h6' sx={{color: 'white'}}>Vælg terning</Typography></label>
+    
       <select name="dice" id="dice" onChange={selectDice}>
       <option value="20">d20</option>
       <option value="12">d12</option>
