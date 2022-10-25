@@ -20,7 +20,7 @@ const style = {
 };
 
 const BtnStyle = {
-  border: '2px solid var(--btnColor)',
+  border: 'var(--border)',
   color: 'var(--btnColor)',
   backgroundColor: 'var(--bgColor)',
   width: 'var(--btnWidth)',
