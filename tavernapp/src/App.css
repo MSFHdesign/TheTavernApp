@@ -1,4 +1,6 @@
 :root {
+
+  /* Modals */
   --btnColor: #A7915E;
   --border: 2px solid#A7915E;
   --bgColor: rgba(2,2,2,0.3);
@@ -7,15 +9,29 @@
   --btnWidth: 250px;
   --btradius: 26px;
   --Gap: 25px;
+
+  /* Fonts  */
   --H1: #ffffff;
   --H2Color: #ffffff;
   --H1Size: 3rem;
   --P: #f2f2f2;
   --H2: #f2f2f2;
   --H3: #f2f2f2;
+
+  /* Delete knapper */
   --Delete: rgb(185, 0, 0);
   --DeleteColor: rgba(250, 250, 250, 1);
   --DeleteBorder: 2px solid #f2f2f2;
+
+
+  /* Tilføj nye beskeder */
+  --addbtnSize: 80px;
+  --addBtnBGColor: rgb(0,0,0);
+  --addBtnColor: rgb(250,250,250);
+  --addBtnBorder: 2px solid rgb(250,250,250);
+
+  /*  */ 
+
 }
 
 

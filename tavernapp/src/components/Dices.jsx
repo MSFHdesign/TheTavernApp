@@ -3,6 +3,7 @@ import { Button, Box, Typography, FormControl,InputLabel, MenuItem, Select} from
 
 const App = () => {
   const [num, setNum] = useState(0);
+
   const  [dice,setDice] = useState(20);
 
   function randomNumberInRange(min, max) {
@@ -17,6 +18,7 @@ const handleChange = (event) => {
   const handleClick = () => {
     setNum(randomNumberInRange(1, dice));
   };
+ 
 
 
   return (
@@ -45,7 +47,7 @@ const handleChange = (event) => {
     alignContent: 'center',
     alignItems: 'center',mt: 'var(--gap)'}}>
       <Typography variant ='h4' color='white'>D{dice} rullede:  </Typography>
-      <Typography variant="h5" color="white" sx={{fontSize: '35px',mt: 'var(--gap)' }}> {num} </Typography>
+      <Typography variant="h5" color="white" sx={{fontSize: '35px',mt: 'var(--gap)' }}> {num}   </Typography>
 
       </Box>
 

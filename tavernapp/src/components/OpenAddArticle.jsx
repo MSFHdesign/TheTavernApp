@@ -20,8 +20,8 @@ const style = {
 };
 
 const BtnStyle = {
-    color: 'white',
-    border: '2px solid #f2f2f2',
+    color: 'var(--addBtnColor)',
+    border: 'var(--addBtnBorder)',
     '&:hover': {
         backgroundColor: 'gray',
         color: 'white',

@@ -24,7 +24,7 @@ export default function AddMessage() {
 
     const handlePublish = ()=>{
         if(!formData.Title  || !formData.Description){
-            alert("Please fill all the fields");
+            alert("Udfyld alle felter, tak!");
             return;
         }
 
@@ -75,8 +75,8 @@ export default function AddMessage() {
 }
   return (
     <div className='form'>
-        <h2>Add a post</h2>
-        <label htmlFor="">Select group:</label>
+        <h2>Tilføj post</h2>
+        <label htmlFor="">Select gruppe:</label>
         <select name='Group' className='form-control' value={formData.Group} onChange={(e)=> handleChange(e)}>
             <option value="Curse of Strahd">Curse Of Strahd</option>
             <option value="Tomb of Horrors">Tomb of Horrors</option>
@@ -89,10 +89,10 @@ export default function AddMessage() {
         <input type="text" name='Title' className='form-control' value={formData.Title} onChange={(e)=> handleChange(e)} />
         
         {/* Description*/}
-        <label htmlFor="">Description:</label>
+        <label htmlFor="">Beskrivelse:</label>
         <textarea name='Description' className='form-control' value={formData.Description} onChange={(e)=> handleChange(e)}/>
 
-        <label htmlFor="">Sent by:</label>
+        <label htmlFor="">Sendt af:</label>
         <input type="text" name='SentBy' className='form-control' value={formData.SentBy} onChange={(e)=> handleChange(e)} />
         {progress === 0 ? null :(
     <div className="progess">
@@ -103,7 +103,7 @@ export default function AddMessage() {
         </div>
     </div>
 )} 
-        <Button sx={{border: '2px solid red', marginTop: 4}} className='form-control-btn'onClick={handlePublish}>Send besked</Button>
+        <Button sx={{border: 'var(--border)', color: 'var(--addBtnColor)',backgroundColor: 'var(--addBtnBGColor)', marginTop: 4}} className='form-control-btn'onClick={handlePublish}>Send besked</Button>
     </div>
   )
 }
