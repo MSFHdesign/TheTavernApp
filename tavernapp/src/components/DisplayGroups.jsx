@@ -24,7 +24,7 @@ export default function Groups() {
         <div>
             {groups.length === 0 ? (
                     <p>No groups found!</p>
-                ) : ( groups.map(({id, group, description, imageUrl, createdAt, joinGroup}) => (
+                ) : ( groups.map(({id, group, description, imageUrl, createdAt, numberOfPeople, joinGroup}) => (
                     <div key={id}>
                         <div>
                             <div>
@@ -34,6 +34,7 @@ export default function Groups() {
                                 <h2>{group}</h2>
                                 <p>{createdAt.toDate().toDateString()}</p>
                                 <h4>{description}</h4>
+                                <h4> Maximum group members: {numberOfPeople}</h4>
                                 <Button> Join Group {joinGroup}</Button>
                                 <DeleteGroup id={id} imageUrl={imageUrl}/>
                             </div>

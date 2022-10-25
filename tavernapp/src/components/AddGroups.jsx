@@ -8,6 +8,7 @@ export default function AddGroups() {
     const [formData, setFormData] = useState({
         group: "",
         description: "",
+        numberOfPeople: "",
         image:"", 
         createdAt: Timestamp.now().toDate(),
     });
@@ -23,7 +24,8 @@ export default function AddGroups() {
     };
 
     const handleCreateGroups = ()=> {
-        if (!formData.group || !formData.description || !formData.image){
+        if (!formData.group || !formData.description || !formData.numberOfPeople ||
+        !formData.image){
             alert('Please fill all the fields');
             return;
         }
@@ -47,6 +49,7 @@ export default function AddGroups() {
         
             group:"",
             description: "",
+            numberOfPeople: "",
             image: "",
         });
 
@@ -56,6 +59,7 @@ export default function AddGroups() {
             addDoc(groupRef,{
                 group: formData.group,
                 description: formData.description,
+                numberOfPeople: formData.numberOfPeople,
                 imageUrl: url,
                 createdAt: Timestamp.now().toDate(),
             })
@@ -93,6 +97,19 @@ export default function AddGroups() {
             rows=""
             onChange={(e)=>handleChange(e)}
         />
+
+            {/* number of peoples in the group */}
+            <label htmlFor="">Maximum group members</label>
+            <input
+            type="number"
+            name='numberOfPeople'
+            placeholder='Max people in group'
+            value={formData.numberOfPeople}
+            max="50"
+            min="1"
+            onChange={(e)=>handleChange(e)}
+            />
+
 
             {/* image */}
         <label htmlFor="">Image</label>
