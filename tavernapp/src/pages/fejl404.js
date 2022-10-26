@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
+import { useState } from 'react';
 import BottomNav from '../components/BottomNav';
 import TopNav from '../components/TopNav';
 export default function fejl404() {
+
 
 
 const Jokes = [
@@ -40,19 +42,25 @@ const Jokes = [
   ``,
 ]
 
+const [joke, setJoke] = useState(0);
+
+var math = 0;
+
+
+function randomNumberInRange() {
+    
+  var math = Math.floor(Math.random() * Jokes.length);
+};
 
   return (
     <Box sx={{minHeight: '100vh'}}>
          <TopNav/>
         <Typography variant="h3" color="initial">Det er menneskeligt at fejle</Typography>
     
-
-
-            <Button onClick={() => {
-    alert('DU TRYKKEDE PÅ MIG!!! :O');
-  }}>
-    TRYK IKKE PÅ MIG
-  </Button>
+<Button> HER ER EN KNAP </Button>
+    <Typography onClick={randomNumberInRange()}>
+      HER ER EN JOKE
+    </Typography>
       
   <BottomNav /> </Box>
   )
