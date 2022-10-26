@@ -3,6 +3,8 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 import { Box } from "@mui/material";
 import "./Communities.css";
+import BottomNav from '../components/BottomNav';
+import TopNav from '../components/TopNav';
 
 import { Typography } from "@mui/material";
 
@@ -82,6 +84,7 @@ export default function Communities() {
       }}
       className="communities"
     >
+        <TopNav/>
       <Typography variant="h2" sx={{ fontSize: 50, color: "var(--H2Color)" }}>
         Communities
       </Typography>
@@ -118,6 +121,6 @@ export default function Communities() {
           </div>
         ))
       )}
-    </Box>
+  <BottomNav />  </Box>
   );
 }

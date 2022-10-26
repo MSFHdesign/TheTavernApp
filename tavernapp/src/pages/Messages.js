@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-
+import TopNav from '../components/TopNav';
 import DisplayMessages from '../components/DisplayMessage'
-
+import BottomNav from '../components/BottomNav';
 import BoxAddMessage from '../components/BoxAddMessage.jsx';
 
 const ContainerStyle = {
@@ -19,7 +19,7 @@ export default function Messages() {
     return (
 
 
-        <Box sx={ContainerStyle}> 
+        <Box sx={ContainerStyle}>  <TopNav/>
             <Typography variant ='h2' sx={{fontSize: 50, color: 'var(--H2Color)',pt:'60px',}}>
                 Beskeder
             </Typography>
@@ -32,7 +32,7 @@ export default function Messages() {
 
 
 
-        </Box>
+            <BottomNav /> </Box>
 
 
     )

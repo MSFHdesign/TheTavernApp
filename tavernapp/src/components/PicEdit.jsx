@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 
 import Avatar from "react-avatar-edit";
@@ -43,9 +44,17 @@ export default class App extends React.Component {
           src={this.state.src}
           //crossOrigin="anonymous"
         />
+
+        <Box sx={{display: 'flex', justifyContent: 'center', pt: 5 }}> 
         <img src={this.state.preview} alt="Preview" />
+        </Box>
       </div>
     );
   }
 }
 
+
+
+export function ProfilPictureFunction() {
+    return (<img src={this.state.preview} alt="Preview" />)
+}

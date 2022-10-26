@@ -22,7 +22,7 @@ export default function Login() {
             <LoginUser />
             <CreateUser />
           </Box>
-    </Box>
+           </Box>
 
 
 

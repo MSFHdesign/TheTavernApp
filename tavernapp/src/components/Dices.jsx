@@ -7,7 +7,7 @@ const App = () => {
   const  [dice,setDice] = useState(20);
 
   function randomNumberInRange(min, max) {
-    // 👇️ get number between min (inclusive) and max (inclusive)
+    
     return Math.floor(Math.random() * max) + min;
   };
   
