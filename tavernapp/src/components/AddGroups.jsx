@@ -103,7 +103,6 @@ export default function AddGroups() {
             <input
             type="number"
             name='numberOfPeople'
-            placeholder='Max people in group'
             value={formData.numberOfPeople}
             max="50"
             min="1"
