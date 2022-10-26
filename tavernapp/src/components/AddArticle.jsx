@@ -93,7 +93,7 @@ export default function AddArticle() {
         <h2>Add a post</h2>
         
         <label htmlFor="">Select community</label>
-        <select name='Communities' className='form-control' value={formData.community} onChange={(e)=> handleChange(e)}>
+        <select name='community' className='form-control' value={formData.community} onChange={(e)=> handleChange(e)}>
             <option value="DM-skærme">DM-skærme</option>
             <option value="Dnd'ere i Aarhus">Dnd'ere i Aarhus</option>
             <option value="Dnd'ere i Aalborg">Dnd'ere i Aalborg</option>
