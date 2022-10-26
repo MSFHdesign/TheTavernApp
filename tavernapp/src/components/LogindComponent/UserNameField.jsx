@@ -43,8 +43,10 @@ export default function InputAdornments() {
     m:1,
     width: '90%',
     color: 'white',
-    backgroundColor: 'rgba(250,250,250,0.1)',
-    borderRadius: 4
+    backgroundColor: 'rgba(250,250,250,0.4)',
+    border: 'none',
+  
+
     
   }
 
@@ -53,7 +55,6 @@ export default function InputAdornments() {
         <Typography variant='h4' sx={{color: 'white'}} > Log ind </Typography>
      <form>
       <TextField sx={StyleBtns}
-        helperText="Rasmus The Reactor"
         id="demo-helper-text-misaligned"
         label="Brugernavn"
         placeholder='RasmusTheReactor'
@@ -69,8 +70,8 @@ export default function InputAdornments() {
             value={values.password}
             onChange={handleChange('password')}
             endAdornment={
-              <InputAdornment position="end">
-                <IconButton sx={{color: 'white'}}
+              <InputAdornment position="end" sx={{border: 'none'}}>
+                <IconButton sx={{color: 'white', border: 'none'}}
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
