@@ -93,15 +93,15 @@ export default function AddArticle() {
         <h2>Add a post</h2>
         
         <label htmlFor="">Select community</label>
-        <select name='Communities' className='form-control' value={formData.community} onChange={(e)=> handleChange(e)}>
-            <option value="DM-skærme">DM-skærme</option>
-            <option value="Dnd'ere i Aarhus">Dnd'ere i Aarhus</option>
-            <option value="Dnd'ere i Aalborg">Dnd'ere i Aalborg</option>
-            <option value="Guide til spændende karaktere">Guide til spændende karaktere</option>
-            <option value="For nybegyndere">For nybegyndere</option>
+        <select name='community' className='form-control' value={formData.community} onChange={(e)=> handleChange(e)}>
+            <option value="DM-skaerme">DM-skærme</option>
+            <option value="Dndere-i-Aarhus">Dnd'ere i Aarhus</option>
+            <option value="Dndere-i-Aalborg">Dnd'ere i Aalborg</option>
+            <option value="Guide-til-spaedende-karaktere">Guide til spændende karaktere</option>
+            <option value="For-nybegyndere">For nybegyndere</option>
             <option value="Terningsamlerne">Terningsamlerne</option>
-            <option value="Rangers be rangin">Rangers be rangin'</option>
-            <option value="Bards unite">Bards unite!</option>
+            <option value="Rangers-be-rangin">Rangers be rangin'</option>
+            <option value="Bards-unite">Bards unite!</option>
         </select>
 
         <label htmlFor="">Title</label>

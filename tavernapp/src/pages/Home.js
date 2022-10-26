@@ -14,7 +14,7 @@ import { Box, Typography,  } from '@mui/material'
 export default function Home() {
     return(
     
-    <Box className="App" sx={{minHeight: '100vh',}}> <TopNav/>
+    <Box className="App" sx={{minHeight: '100vh',pb:'calc(var(--addbtnSize) + 20%)'}}> <TopNav/>
 
     <body>
   <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', }}>
@@ -26,7 +26,7 @@ export default function Home() {
 
 
 
-  
+
   <BottomNav /></Box>
 
 
