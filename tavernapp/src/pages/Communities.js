@@ -36,6 +36,12 @@ export default function Communities() {
 
   const [activeTags, setActiveTags] = useState("1");
 
+  function getActiveClass (id) {
+    return (
+      activeTags === id ? "active" : undefined
+    );
+  }
+
   const handleBtns = (e) => {
     let word = e.target.value;
     setActiveTags(e.target.id);
@@ -95,19 +101,19 @@ export default function Communities() {
         Communities
       </Typography>
       <div className="btns">
-        <button value="Alle" key={1}className={activeTags ==="1" ? "active" : undefined} id={"1"} onClick={handleBtns}>
+        <button value="Alle" className={getActiveClass("1")} id={"1"} onClick={handleBtns}>
           Alle
         </button>
-        <button value="Class" key={2}className={activeTags ==="2" ? "active" : undefined} id={"2"} onClick={handleBtns}>
+        <button value="Class" className={getActiveClass("2")} id={"2"} onClick={handleBtns}>
           Class
         </button>
-        <button value="Noobs" key={3}className={activeTags ==="3" ? "active" : undefined} id={"3"} onClick={handleBtns}>
+        <button value="Noobs" className={getActiveClass("3")} id={"3"} onClick={handleBtns}>
           Ny i dnd
         </button>
-        <button value="Accessories" key={4}className={activeTags ==="4" ? "active" : undefined} id={"4"} onClick={handleBtns}>
+        <button value="Accessories" className={getActiveClass("4")} id={"4"} onClick={handleBtns}>
           Grej
         </button>
-        <button value="Location" key={5}className={activeTags ==="5" ? "active" : undefined} id={"5"} onClick={handleBtns}>
+        <button value="Location" className={getActiveClass("5")} id={"5"} onClick={handleBtns}>
           Nær mig
         </button>
       </div>
@@ -122,7 +128,7 @@ export default function Communities() {
               </div>
               <h2>{item.title}</h2>
               <h4>{item.description}</h4>
-              <FancyButton id={item.id} k={123} />
+              <FancyButton id={item.id} />
             </div>
           </div>
         ))

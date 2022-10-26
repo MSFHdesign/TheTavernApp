@@ -13,7 +13,7 @@ export default function Login() {
     <Box sx={{ height: '100vh',  }}>
        
         <Typography variant="h1" color="initial" sx={{fontSize: 'var(--H1Size)', textAlign: 'center', pb: 2, color: 'var(--H1)',pt:'60px'}}>
-          The Tavnern
+          The Tavern
         </Typography>
 
           <Box sx={{ marginTop: '100px',
