@@ -7,7 +7,7 @@ import BtnTopapp from './ModalTop.jsx';
 
 export default function TopNav() {
   return (
-    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'fixed',minWidth:'100vw', top:'0px',left: 0, zIndex: '1000',backgroundColor: 'rgba(250,250,250,0.8)', padding: 1}}>
+    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'fixed',minWidth:'100vw', top:'0px',left: 0, zIndex: '1000',backgroundColor: 'var(--navBGcolor)', padding: 1}}>
       <Link to="/home">
           <img src={logo} alt="The Tavern Logo" style={{width: "100px"}}/>
       </Link>

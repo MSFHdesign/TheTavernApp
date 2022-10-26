@@ -21,7 +21,7 @@ const style = {
 };
 
 const btnStyled = {
-color: 'black',
+color: 'var(--iconColor)',
 };
 
 
