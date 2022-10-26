@@ -22,16 +22,16 @@
   --H3size: 40px;
 
   /* Delete knapper */
-  --Delete: rgb(43, 158, 1);
+  --Delete: rgba(157, 7, 7, 0.71);
   --DeleteColor: rgba(250, 250, 250, 1);
   --DeleteBorder: 2px solid #f2f2f2;
 
 
   /* Tilføj nye beskeder */
   --addbtnSize: 80px;
-  --addBtnBGColor: rgb(0, 0, 0);
-  --addBtnColor: rgb(250,250,250);
-  --addBtnBorder: 2px solid rgb(251, 255, 22);
+  --addBtnBGColor: rgb(255, 98, 250);
+  --addBtnColor: rgb(0, 0, 0);
+  --addBtnBorder: 2px solid rgb(255, 22, 189);
 
   /*  */ 
 
