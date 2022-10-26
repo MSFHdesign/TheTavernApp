@@ -1,41 +1,51 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import AddArticle from '../components/AddArticle'
 import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
+
 import Typography from '@mui/material/Typography';
-import AddArticle from '../components/AddArticle';
 
-
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '80%',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+const style3 = {
+  color: 'var(--addBtnColor)',
+  width: 'var(--addbtnSize)',
+  height: 'var(--addbtnSize)',
+  backgroundColor: 'var(--addBtnBGColor)',
+  position: 'fixed',
+    bottom: '8%',
+    left: '40%',
+  border: 'var(--addBtnBorder)',
   boxShadow: 24,
   p: 4,
+  m: 0,
 };
 
-const BtnStyle = {
-    color: 'var(--addBtnColor)',
-    border: 'var(--addBtnBorder)',
-    '&:hover': {
-        backgroundColor: 'gray',
-        color: 'white',
-    }
-}
+const style1 = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '80%',
+    height: '70%',
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    mt:2,
+    mb:4,
+  };
 
-export default function KeepMountedModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function FloatingActionButtons() {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+  
   return (
-    <Box sx={{marginTop: 2,}}>
-      <Button onClick={handleOpen} sx={BtnStyle}>Tilføj post</Button>
+    <Box sx={{ '& > :not(style)':  style3 }}>
+      <Fab color="primary" aria-label="add" onClick={handleOpen}>
+        <AddIcon />
+      </Fab>
       <Modal
         keepMounted
         open={open}
@@ -43,9 +53,9 @@ export default function KeepMountedModal() {
         aria-labelledby="keep-mounted-modal-title"
         aria-describedby="keep-mounted-modal-description"
       >
-        <Box sx={style}>
-       
-          <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
+        <Box sx={style1}>
+          
+          <Typography id="keep-mounted-modal-description" sx={{ mt: 2, }}>
           <AddArticle/>
           </Typography>
         </Box>
@@ -53,3 +63,7 @@ export default function KeepMountedModal() {
     </Box>
   );
 }
+
+
+
+

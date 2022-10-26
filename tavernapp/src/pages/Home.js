@@ -23,6 +23,10 @@ export default function Home() {
   <Typography sx={{fontSize: 50, color: 'var(--H2Color)'}}> Velkommen</Typography>
   <ProfilName />
   </Box>
+
+
+
+  
   <BottomNav /></Box>
 
 

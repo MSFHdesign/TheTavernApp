@@ -91,9 +91,9 @@ export default function InputAdornments() {
         <Box sx={{
           display: 'flex', justifyContent: 'space-between', marginTop: '50px'
           }}>
-        <Button className='UserBtns btn' sx={{border: 'var(--border)', mt: 1, mr: 1, width: '50%', color: 'var(--btnColor)'}} type="submit" variant="outlined">
-         Glemt?
-        </Button>
+        <Link to='/404'> <Button className='UserBtns btn' sx={{border: 'var(--border)', mt: 1, mr: 1, width: '50%', color: 'var(--btnColor)'}} type="submit" variant="outlined">
+         Glemt? 
+        </Button> </Link>
         <Link to="/home">   <Button className='UserBtns btn' sx={{ mt: 1, mr: 1,width: '50%',color: 'white', backgroundColor: 'var(--btnColor)', border: 'var(--border)' }} type="submit" variant="outlined">
           Logind
         </Button></Link>
