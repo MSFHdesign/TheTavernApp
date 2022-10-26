@@ -47,7 +47,7 @@ const handleChange = (event) => {
     alignContent: 'center',
     alignItems: 'center',mt: 'var(--gap)'}}>
       <Typography variant ='h4' color='white'>D{dice} rullede:  </Typography>
-      <Typography variant="h5" color="white" sx={{fontSize: '35px',mt: 'var(--gap)' }}> {num} + {2}    </Typography>
+      <Typography variant="h5" color="white" sx={{fontSize: '35px',mt: 'var(--gap)' }}> {num}</Typography>
 
       </Box>
 
