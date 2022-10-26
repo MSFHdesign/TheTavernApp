@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import Login from './pages/Login';
 import TopNav from './components/TopNav';
 import Fejl404 from './pages/fejl404';
+import EditProfil from './pages/EditProfil';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
     <Route path='/groups' element={<Groups/>}/>
     <Route path='/messages' element={<Messages/>}/>
     <Route path='/dice' element={<Dice/>}/>
-
+    <Route path='/editprofil' element={<EditProfil />} />
     
 </Routes>
 <BottomNav />
