@@ -64,7 +64,7 @@
     border-radius: 4px;
     min-width: 64px;
 }
-.btns > button:focus{
+.btns > .active {
     background-color: var(--btnColor);
 }
 .btn {

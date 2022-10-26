@@ -34,24 +34,30 @@ export default function Communities() {
 
   const [state, setState] = useState(Communities);
 
+  const [activeTags, setActiveTags] = useState("1");
+
   const handleBtns = (e) => {
     let word = e.target.value;
+    setActiveTags(e.target.id);
     if (word === "Alle") {
       setState(Communities);
+
     } else if (word === "Class") {
       const filtered = Communities.filter((item) => item.tags === "class");
       setState(filtered);
+
     } else if (word === "Noobs") {
       const filtered = Communities.filter((item) => item.tags === "noobs");
       setState(filtered);
+
     } else if (word === "Accessories") {
-      const filtered = Communities.filter(
-        (item) => item.tags === "accessories"
-      );
+      const filtered = Communities.filter((item) => item.tags === "accessories");
       setState(filtered);
+
     } else if (word === "Location") {
       const filtered = Communities.filter((item) => item.tags === "location");
       setState(filtered);
+
       console.log(filtered);
     }
   };
@@ -89,19 +95,19 @@ export default function Communities() {
         Communities
       </Typography>
       <div className="btns">
-        <button value="Alle" onClick={handleBtns}>
+        <button value="Alle" key={1}className={activeTags ==="1" ? "active" : undefined} id={"1"} onClick={handleBtns}>
           Alle
         </button>
-        <button value="Class" onClick={handleBtns}>
+        <button value="Class" key={2}className={activeTags ==="2" ? "active" : undefined} id={"2"} onClick={handleBtns}>
           Class
         </button>
-        <button value="Noobs" onClick={handleBtns}>
+        <button value="Noobs" key={3}className={activeTags ==="3" ? "active" : undefined} id={"3"} onClick={handleBtns}>
           Ny i dnd
         </button>
-        <button value="Accessories" onClick={handleBtns}>
+        <button value="Accessories" key={4}className={activeTags ==="4" ? "active" : undefined} id={"4"} onClick={handleBtns}>
           Grej
         </button>
-        <button value="Location" onClick={handleBtns}>
+        <button value="Location" key={5}className={activeTags ==="5" ? "active" : undefined} id={"5"} onClick={handleBtns}>
           Nær mig
         </button>
       </div>
