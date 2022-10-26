@@ -14,7 +14,7 @@ const style = {
   height: '70%',
   top: '10%',
   left: '7%',
-  bgcolor: 'rgpa(0,0,0,0.8)',
+  bgcolor: 'rgba(0,0,0,1)',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,

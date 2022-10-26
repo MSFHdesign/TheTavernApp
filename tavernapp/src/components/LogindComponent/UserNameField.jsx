@@ -43,8 +43,10 @@ export default function InputAdornments() {
     m:1,
     width: '90%',
     color: 'white',
-    backgroundColor: 'rgba(250,250,250,0.1)',
-    borderRadius: 4
+    backgroundColor: 'rgba(250,250,250,0.4)',
+    border: 'none',
+  
+
     
   }
 
