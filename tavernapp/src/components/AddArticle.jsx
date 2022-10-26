@@ -100,8 +100,8 @@ export default function AddArticle() {
             <option value="Guide til spændende karaktere">Guide til spændende karaktere</option>
             <option value="For nybegyndere">For nybegyndere</option>
             <option value="Terningsamlerne">Terningsamlerne</option>
-            <option value="Rangers be rangin">Rangers be rangin'</option>
-            <option value="Bards unite">Bards unite!</option>
+            <option value="Rangers-be-rangin">Rangers be rangin'</option>
+            <option value="Bards-unite">Bards unite!</option>
         </select>
 
         <label htmlFor="">Title</label>
