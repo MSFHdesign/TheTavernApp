@@ -53,8 +53,23 @@ export default function Fejl404() {
      Yell “drinks on the house!”`,
     `What do you call a raging barbarian?
      Anything you like – you can’t make him listen while Raging.`,
-  ];
-  var math = 0;
+     `What is the favorite hot beverage of a cleric? Divini-tea!`,
+     `What is Dragon with no silver called? A dron.`,
+     `Why are dragons amazing musicians? They know their scales.`,
+     `What did the demon have to face when his girlfriend had joined the Holy Order? The fact that she fiend-zoned him.`,
+     `Why are the spellcasters are most unbalanced? Because they cantrip.`,
+     `What is a Goblin who has an injured leg called? A hobblin'.`,
+     `How many Paladins will it take to fix a light bulb? Two. One to install the bulb, and the other to "uphold the light".`,
+     `A human, a half orc, and an elf walk into a bar. The dwarf walks under it`,
+     `What is an orc with two brain cells called? 
+
+     Pregnant.`,
+     `Der er ikke flere jokes ! staaaaaaaaaph! `,
+     `Okay, nu lover jeg der ikke er flere...`,
+     `jeg meeeener det; STOP NU! sød tak`,
+     
+    ];
+    var math = 0;
 
   function randomNumberInRange() {
     math = Math.floor(Math.random() * Jokes.length);
