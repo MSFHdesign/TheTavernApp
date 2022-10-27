@@ -23,16 +23,19 @@ export default function Groups() {
     function Member ()  {
         const [active, setActive] = useState(false);
         const joinClick = () => {
-        setActive(!active);
+        setActive(!active)
         };
-
-        const [counterState, setCounterState] = useState(0);
-        const incrementCounter = () => setCounterState(counterState + 1)
+        
+        const [joinState, setjoinState] = useState(false);
+        const leaveClick = () => {
+            setjoinState(!joinState)          
+        };
+        
 
     return (
         <div>
-        <h4 onClick={joinClick}> Medlemmer i gruppen: </h4>
-        <Button onClick={joinClick}>
+        <h4> Medlemmer i gruppen: {joinState+1} </h4>
+        <Button onClick={(event) => [joinClick(), leaveClick(joinState+1)]}>
             { active ? "Forlad gruppe" : "Bliv medlem"} </Button>
         </div>
         );
