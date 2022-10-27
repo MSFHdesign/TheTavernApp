@@ -28,7 +28,8 @@ const style1 = {
     transform: 'translate(-50%, -50%)',
     width: '80%',
     height: '70%',
-    bgcolor: 'background.paper',
+    bgcolor: 'black',
+    color: 'white',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -56,7 +57,9 @@ export default function FloatingActionButtons() {
         <Box sx={style1}>
           
           <Typography id="keep-mounted-modal-description" sx={{ mt: 2, }}>
+
           <AddMessage/>
+
           </Typography>
         </Box>
       </Modal>
