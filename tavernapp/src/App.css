@@ -3,8 +3,8 @@
   /* Modals */
   --btnColor: #A7915E;
   --border: 2px solid#A7915E;
-  --bgColor: rgba(2,2,2,0.3);
-  --BgPop:  hsl(0, 0%, 0%, 0.40);
+  --bgColor: rgb(2, 2, 2);
+  --BgPop:  hsl(0, 0%, 0%, 1.40);
   --gap: 25px;
   --btnWidth: 250px;
   --btradius: 26px;
@@ -22,19 +22,21 @@
   --H3size: 40px;
 
   /* Delete knapper */
-  --Delete: rgb(43, 158, 1);
+  --Delete: rgba(255, 255, 255, 0.143);
   --DeleteColor: rgba(250, 250, 250, 1);
-  --DeleteBorder: 2px solid #f2f2f2;
+  --DeleteBorder: 2px solid #A7915E;
 
 
   /* Tilføj nye beskeder */
   --addbtnSize: 80px;
-  --addBtnBGColor: rgb(0, 0, 0);
-  --addBtnColor: rgb(250,250,250);
-  --addBtnBorder: 2px solid rgb(251, 255, 22);
+  --addBtnBGColor: #A7915E;;
+  --addBtnColor: rgb(216, 212, 215);
+  --addBtnBorder: 2px solid rgb(216, 212, 215);
 
-  /*  */ 
-
+  /* nav */
+  
+  --navBGcolor: rgba(0,0,0,0.8);
+  --iconColor: rgba(250,250,250,1);
 }
 a:link  a:visited {
   color: white;

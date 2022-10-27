@@ -24,7 +24,7 @@ export default function ProfilPic() {
     <Box sx={{display:'flex', justifyContent: 'left', alignItems: 'center', pt: 2, pb: 2,}}> 
     <Box sx={StyledProfilPictur}>
             
-
+    
     </Box>
 
        

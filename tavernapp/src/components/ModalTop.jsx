@@ -21,7 +21,7 @@ const style = {
 };
 
 const btnStyled = {
-color: 'black',
+color: 'var(--iconColor)',
 };
 
 
@@ -58,10 +58,10 @@ export default function BasicModal() {
           <Link to="/login">  LOG UD!</Link>
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
-            Rediger profil 
+           <Link to ="/editprofil"> Rediger profil</Link> 
           </Typography>
           <Typography id="modal-modal-description" sx={liStyled}>
-            Support 
+           <Link to ='/404'> Support </Link>
           </Typography>
 
         </Box>

@@ -25,11 +25,11 @@ export default function Articles() {
             Articles.length === 0 ? (
                 <p>No articles found!</p>
             ) : (
-                Articles.map(({id,title,description,imageUrl,createdAt}) => (
+                Articles.map(({id,title,description,imageUrl,createdAt,community}) => (
                 <div className = 'article' key = {id}>
                     <div className='text'>
                         <h2>{title}</h2>
-                        <p>{createdAt.toDate().toDateString()}</p>
+                        <p>Slået op i: {community}  {createdAt.toDate().toDateString()}</p>
                         <h4>{description}</h4>
                         <div className={!imageUrl ? "noimg" : "img"}>
                             <img src = {imageUrl} alt="title" />

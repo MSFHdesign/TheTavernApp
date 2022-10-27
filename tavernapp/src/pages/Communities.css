@@ -6,10 +6,6 @@
     color: var(--H2);
 }
 
-.communities > h2 {
-    padding: 0.8em;
-}
-
 .single-community{
     background-color: hsl(0, 0%, 0%, 0.40);
     margin-top: 50px;
@@ -64,9 +60,12 @@
     border-radius: 4px;
     min-width: 64px;
 }
+.btns > .active {
+    background-color: var(--btnColor);
+}
 .btn {
     color: white;
-    border: 2px solid #f2f2f2;
+    border: var(--border);
     background-color: transparent;
     text-transform: uppercase;
     font-weight: 500;
@@ -76,7 +75,7 @@
    
 }
 .active {
-    background-color: gray;
+    background-color: var(--btnColor);
     color: white;  
     text-transform: uppercase;
     font-weight: 500;
