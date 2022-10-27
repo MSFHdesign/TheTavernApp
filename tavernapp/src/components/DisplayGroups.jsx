@@ -3,6 +3,7 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { db } from "../firebaseConfig";
 import DeleteGroup from "./DeleteGroup";
+import "./addGroups.css";
 
 export default function Groups() {
   const [groups, setGroups] = useState([]);
@@ -95,7 +96,7 @@ export default function Groups() {
                     sx={{
                       fontSize: "var(--H2size",
                       textDecoration: "bold",
-                      pt: 2,
+                      pt: 1,
                       color: "whitesmoke",
                     }}
                   >

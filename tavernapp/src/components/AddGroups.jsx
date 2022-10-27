@@ -3,7 +3,6 @@ import { Timestamp, collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage, db } from "../firebaseConfig";
 import { toast } from "react-toastify";
-import "./AddMessage.css";
 import { Button, TextField } from "@mui/material";
 import "./addGroups.css";
 
