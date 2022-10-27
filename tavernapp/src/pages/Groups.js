@@ -39,7 +39,7 @@ export default function Groups() {
           display: "flex",
           borderRadius: "26px",
           pb: "calc(var(--addbtnSize) + 10%)",
-        }}
+        }} 
       >
         <BoxAddGroup />
         <BottomNav />
