@@ -64,21 +64,30 @@ export default function Groups() {
           ({ id, group, description, imageUrl, createdAt, numberOfPeople }) => (
             <Box
               sx={{
-                m: 2,
+                m: 1,
                 mt: 4,
                 p: 1,
+                pb: 3,
                 backgroundColor: "hsl(0, 0%, 0%, 0.40)",
                 borderRadius: "26px",
                 border: "var(--border)",
+                maxWidth: "85vw",
               }}
               key={id}
             >
               <div>
-                <div>
+                <div
+                  style={{
+                    ml: "auto",
+                    mr: "auto",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
                   <img
                     src={imageUrl}
                     alt="title"
-                    style={{ height: 180, width: 180 }}
+                    style={{ height: 180, paddingTop: "15px" }}
                   />
                 </div>
                 <div>

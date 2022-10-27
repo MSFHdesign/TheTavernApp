@@ -6,6 +6,7 @@ import BoxAddGroup from "../components/boxaddgroup";
 import "./Groups.css";
 
 import BottomNav from "../components/BottomNav";
+import { Typography } from "@mui/material";
 const ContainerStyle = {
   minHeight: "100vh",
   display: "flex",
@@ -19,7 +20,9 @@ export default function Groups() {
     <Box sx={ContainerStyle}>
       {" "}
       <TopNav />
-      <h2 className="test">Groups</h2>
+      <Typography className="test" sx={{ fontSize: 50 }}>
+        Groups
+      </Typography>
       <Box
         sx={{
           m: 1,
