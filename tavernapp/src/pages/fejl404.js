@@ -90,7 +90,7 @@ export default function Fejl404() {
       <Typography
         variant="h5"
         color="initial"
-        sx={{ pt: 4, textAlign: "center", color: "#f2f2f2" }}
+        sx={{ pt: 4, textAlign: "center", color: "var(--P)" }}
       >
         Et slagsmål er brudt ud på kroen! <br></br>
         Let stemningen med humor:
