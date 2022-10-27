@@ -86,7 +86,7 @@ export default function Fejl404() {
       >
         Hovsa!
       </Typography>
-      <img src={oops} alt="Spilt beer" style={{padding: "20px 80px 0px", opacity: "0.6"}} />
+      <img src={oops} alt="Spilt beer" style={{padding: "20px 80px 0px", opacity: "0.6", width: "230px"}} />
       <Typography
         variant="h5"
         color="initial"
