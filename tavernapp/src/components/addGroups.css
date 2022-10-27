@@ -1,0 +1,11 @@
+.form {
+  color: white;
+}
+
+.form-control {
+  background-color: white;
+}
+
+#form-control {
+  margin: 10px 0 30px 0;
+}
