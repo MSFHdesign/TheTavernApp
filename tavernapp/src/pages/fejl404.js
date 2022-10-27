@@ -85,7 +85,7 @@ export default function Fejl404() {
         sx={{
           marginTop: 4,
           border: "2px solid Green",
-          backgroundColor: "green",
+          backgroundColor: "transparent",
           color: "white",
           width: "200px",
           marginLeft: 12,
