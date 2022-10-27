@@ -16,6 +16,7 @@ const App = () => {
 
   function randomNumberInRange(min, max) {
     if (dice === "12" && Math.floor(Math.random() * max) === 0) {
+ 
       return 13 + " " + "(its a joke)";
     } else {
       return Math.floor(Math.random() * max) + min;
@@ -83,6 +84,7 @@ const App = () => {
             mt: "var(--gap)",
             backgroundColor: "var(--BgPop)",
             borderRadius: "26px",
+            '&:focus': {backgroundColor: 'var(--BgPop)'}
           }}
         >
           Kast terningen
