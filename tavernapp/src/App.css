@@ -40,12 +40,15 @@
 }
 a:link  a:visited {
   color: white;
+  text-decoration: none;
 }
 a:visited {
   color: white;
-  text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
 
 
 .planks-bg {
