@@ -3,6 +3,7 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { db } from "../firebaseConfig";
 import DeleteGroup from "./DeleteGroup";
+import "./addGroups.css";
 
 export default function Groups() {
   const [groups, setGroups] = useState([]);
@@ -66,7 +67,7 @@ export default function Groups() {
               sx={{
                 m: 2,
                 mt: 4,
-                p: 1,
+                p: 3,
                 backgroundColor: "hsl(0, 0%, 0%, 0.40)",
                 borderRadius: "26px",
                 border: "var(--border)",
@@ -75,18 +76,14 @@ export default function Groups() {
             >
               <div>
                 <div>
-                  <img
-                    src={imageUrl}
-                    alt="title"
-                    style={{ height: 180, width: 180 }}
-                  />
+                  <img src={imageUrl} alt="title" />
                 </div>
                 <div>
                   <Typography
                     sx={{
                       fontSize: "var(--H2size",
                       textDecoration: "bold",
-                      pt: 2,
+                      pt: 1,
                       color: "whitesmoke",
                     }}
                   >
