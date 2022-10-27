@@ -1,15 +1,19 @@
 
 .articles{
-    width: 326px;
+    width: 100%;
     display: block;
     height: fit-content;
+    display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
 }
 
 .article{
     background-color: hsl(0, 0%, 0%, 0.40);
     margin-top: 50px;
     color: white;
-    width: 326px;
+    width: 100%;
     border: var(--border);
     border-radius: 26px;
     padding-top: 20px;
