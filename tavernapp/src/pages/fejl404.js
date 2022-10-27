@@ -71,19 +71,30 @@ export default function Fejl404() {
       >
         Hovsa!
       </Typography>
-      <img src={oops} alt="Spilt beer" style={{padding: "20px 50px 0px", opacity: "0.6"}} />
+      <img src={oops} alt="Spilt beer" style={{padding: "20px 80px 0px", opacity: "0.6"}} />
+      <Typography
+        variant="h5"
+        color="initial"
+        sx={{ pt: 4, textAlign: "center", color: "#f2f2f2" }}
+      >
+        Et slagsmål er brudt ud på kroen! <br></br>
+        Let stemningen med humor:
+      </Typography>
 
       <Button
         sx={{
-          marginTop: 10,
+          marginTop: 4,
           border: "2px solid Green",
           backgroundColor: "green",
           color: "white",
+          width: "200px",
+          marginLeft: 12,
+          marginRight: 12
         }}
         onClick={randomNumberInRange}
       >
         {" "}
-        TRYYYYYYK IKKE PÅÅÅÅ MIIIIG{" "}
+        Fortæl joke{" "}
       </Button>
       <Typography color="white" sx={{ margin: 4, fontSize: "20px" }}>
         {joke}
