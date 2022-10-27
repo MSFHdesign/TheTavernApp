@@ -16,7 +16,7 @@ const App = () => {
 
   function randomNumberInRange(min, max) {
     if (dice === "12" && Math.floor(Math.random() * max) === 0) {
-      return 13;
+      return 13 + " " + "(its a joke)";
     } else {
       return Math.floor(Math.random() * max) + min;
     }
