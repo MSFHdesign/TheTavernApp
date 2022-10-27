@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav";
 export default function Fejl404() {
-  const [test, setTest] = useState();
+  const [joke, setJoke] = useState();
 
   const Jokes = [
     `How do you get a D&D player to go out with you?
@@ -57,7 +57,7 @@ export default function Fejl404() {
 
   function randomNumberInRange() {
     math = Math.floor(Math.random() * Jokes.length);
-    setTest(Jokes[math]);
+    setJoke(Jokes[math]);
   }
 
   return (
@@ -84,7 +84,7 @@ export default function Fejl404() {
         TRYYYYYYK IKKE PÅÅÅÅ MIIIIG{" "}
       </Button>
       <Typography color="white" sx={{ margin: 4, fontSize: "20px" }}>
-        {test}
+        {joke}
       </Typography>
       <BottomNav />
     </Box>
