@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav";
+import oops from '../images/oops2.png';
 export default function Fejl404() {
   const [joke, setJoke] = useState();
 
@@ -68,11 +69,12 @@ export default function Fejl404() {
   return (
     <Box sx={{ minHeight: "100vh", display: 'flex',flexDirection: 'column' }}>
       <TopNav />
-      <Typography variant="h3" color="initial" sx={{pt: 8, textAlign: 'center', color: 'white'}}>
-        IK' NOGET HER
+      <Typography variant="h2" color="initial" sx={{pt: 8, textAlign: 'center', color: 'white'}}>
+        Hovsa!
       </Typography>
+      <img src={oops} alt="Spilt beer" style={{padding: "20px 50px 0px", opacity: "0.6"}} />
       
-      <Button sx={{marginTop: 10, border: '2px solid Green', backgroundColor: 'green', color: 'white'}} onClick={randomNumberInRange}> TRYYYYYYK IKKE PÅÅÅÅ MIIIIG </Button>
+      <Button sx={{marginTop: 8, border: '2px solid Green', backgroundColor: 'green', color: 'white'}} onClick={randomNumberInRange}> TRYYYYYYK IKKE PÅÅÅÅ MIIIIG </Button>
       <Typography color='white' sx= {{margin: 4,fontSize: '20px'}}>{joke}</Typography>
       <BottomNav />
     </Box>
