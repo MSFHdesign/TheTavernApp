@@ -15,10 +15,8 @@ const App = () => {
   const [dice, setDice] = useState(20);
 
   function randomNumberInRange(min, max) {
-    if (dice === 12) {
-      if (Math.floor(Math.random() * max) === 0) {
-        return 13;
-      }
+    if (dice === "12" && Math.floor(Math.random() * max) === 0) {
+      return 13;
     } else {
       return Math.floor(Math.random() * max) + min;
     }
