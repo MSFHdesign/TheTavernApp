@@ -3,6 +3,10 @@
     width: 100%;
     display: block;
     height: fit-content;
+    display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
 }
 
 .article{
