@@ -3,7 +3,7 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 import FancyButton from "../components/FancyButton";
 
-//----------------------------Gunvor (lånt og modificeret Magnus' skabelon fra Articles.jsx)---------------------
+//----------------------------Gunvor---------------------
 
 export default function DisplayCommunities () {
   const [Communities, SetCommunities] = useState([]);
@@ -44,6 +44,7 @@ export default function DisplayCommunities () {
     }
   };
 
+//-----------------Lånt og modificeret Magnus' skabelon fra Articles.jsx---------------------
   useEffect(() => {
     const communityRef = collection(db, "Communities");
     const q = query(communityRef, orderBy("createdAt", "desc"));
@@ -77,6 +78,8 @@ export default function DisplayCommunities () {
           Nær mig
         </button>
       </div>
+
+      {/* -----------------Lånt og modificeret Magnus' skabelon fra Articles.jsx--------------------- */}
       {Communities.length === 0 ? (
         <p>Ingen communities at finde</p>
       ) : (
@@ -84,7 +87,7 @@ export default function DisplayCommunities () {
           <div className="single-community" key={item.id}>
             <div className="text">
               <div className={!item.imageUrl ? "noimg" : "img"}>
-                <img src={item.imageUrl} alt="title" />
+                <img src={item.imageUrl} alt={item.title} />
               </div>
               <h2>{item.title}</h2>
               <h4>{item.description}</h4>
