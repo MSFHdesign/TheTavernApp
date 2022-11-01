@@ -1,7 +1,16 @@
+//Firebase data source
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+
+// React effekts
 import React, {useState, useEffect} from 'react';
+
+// database
 import {db} from "../firebaseConfig";
+
+//Komponenter
 import DeleteArticle from './DeleteArticle';
+
+//små styling
 import "./Article.css"
 
 export default function Articles() {

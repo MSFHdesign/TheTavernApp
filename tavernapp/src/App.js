@@ -2,13 +2,14 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
+
+//Pages 
 import Communities from './pages/Communities';
 import Groups from './pages/Groups';
 import Messages from './pages/Messages';
 import Dice from './pages/Dice';
 import Home from './pages/Home'
 import Login from './pages/Login';
-
 import Fejl404 from './pages/fejl404';
 import EditProfil from './pages/EditProfil';
 
