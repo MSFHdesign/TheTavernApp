@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav";
 import oops from '../images/oops2.png';
+// fælles hygge projekt
+
 export default function Fejl404() {
   const [joke, setJoke] = useState();
 

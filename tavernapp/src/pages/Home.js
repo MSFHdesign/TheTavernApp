@@ -8,7 +8,7 @@ import OpenAddArticle from '../components/OpenAddArticle.jsx';
 import TopNav from '../components/TopNav';
 import { Box, Typography,  } from '@mui/material'
 
-
+// Michael & Magnus
 
 
 export default function Home() {

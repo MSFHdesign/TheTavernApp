@@ -4,6 +4,8 @@ import BottomNav from '../components/BottomNav';
 import TopNav from '../components/TopNav';
 import Dices from '../components/Dices.jsx';
 
+//Michael & Magnus
+
 const ContainerStyle = {
     minHeight: '100vh',
     display: 'flex',

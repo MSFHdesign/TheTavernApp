@@ -8,6 +8,8 @@ import TopNav from '../components/TopNav';
 
 import { Typography } from "@mui/material";
 
+//Gunvar
+
 export default function Communities() {
   const [Communities, SetCommunities] = useState([]);
 

@@ -7,6 +7,8 @@ import "./Groups.css";
 
 import BottomNav from "../components/BottomNav";
 import { Typography } from "@mui/material";
+
+// Kasper
 const ContainerStyle = {
   minHeight: "100vh",
   display: "flex",
