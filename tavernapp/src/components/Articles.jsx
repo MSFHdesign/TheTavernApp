@@ -13,7 +13,7 @@ import DeleteArticle from './DeleteArticle';
 import "./Article.css"
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 
-// Magnus
+// Magnus 
 
 export default function Articles() {
   const [Articles, SetArticles] = useState([]);
