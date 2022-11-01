@@ -4,7 +4,7 @@ import TopNav from '../components/TopNav';
 import DisplayMessages from '../components/DisplayMessage'
 import BottomNav from '../components/BottomNav';
 import BoxAddMessage from '../components/BoxAddMessage.jsx';
-
+// Michael & Magnus
 const ContainerStyle = {
     minHeight: '100vh',
     display: 'flex',
