@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 
 import Avatar from "react-avatar-edit";
-
+// Michael
 
 export default class App extends React.Component {
   constructor(props) {

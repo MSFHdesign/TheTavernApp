@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
-
+// Michael
 //Pages 
 import Communities from './pages/Communities';
 import Groups from './pages/Groups';
@@ -17,17 +17,17 @@ function App() {
   return (
 <main className='planks-bg'>
 
-<Routes> 
-    <Route path='/' element={<Login />} />
-    <Route path='/home' element={<Home/>}/>
-    <Route path='*' element={<Login/>}/>
-    <Route path='/404' element ={<Fejl404/>} />
-    <Route path='/communities' element={<Communities/>}/>
-    <Route path='/groups' element={<Groups/>}/>
-    <Route path='/messages' element={<Messages/>}/>
-    <Route path='/dice' element={<Dice/>}/>
-    <Route path='/editprofil' element={<EditProfil />} />
-</Routes>
+  <Routes> 
+      <Route path='/' element={<Login />} />
+      <Route path='/home' element={<Home/>}/>
+      <Route path='*' element={<Login/>}/>
+      <Route path='/404' element ={<Fejl404/>} />
+      <Route path='/communities' element={<Communities/>}/>
+      <Route path='/groups' element={<Groups/>}/>
+      <Route path='/messages' element={<Messages/>}/>
+      <Route path='/dice' element={<Dice/>}/>
+      <Route path='/editprofil' element={<EditProfil />} />
+  </Routes>
 
 </main>
   );

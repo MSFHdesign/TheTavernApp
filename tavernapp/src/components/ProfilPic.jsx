@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-
+//Michael
 const background = 'https://media-exp1.licdn.com/dms/image/C4E22AQFPFDr5ynpGgA/feedshare-shrink_800/0/1659349792433?e=2147483647&v=beta&t=633YTJyVrweXf7sVTEH4Y68t4SNjsBtQelxGN8g3uKM'
 
 const StyledProfilPictur = {

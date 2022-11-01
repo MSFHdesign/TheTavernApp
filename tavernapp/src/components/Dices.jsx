@@ -9,6 +9,8 @@ import {
   Select,
 } from "@mui/material";
 
+// Magnus & Michael
+
 const App = () => {
   const [num, setNum] = useState(0);
 

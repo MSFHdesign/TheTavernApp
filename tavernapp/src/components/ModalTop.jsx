@@ -7,7 +7,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ProfilPic from './ProfilPic'
 import { Link } from 'react-router-dom';
 import ProfilName from './ProfilName';
-
+// Michael
 const style = {
   position: 'absolute',
   top: '7%',
