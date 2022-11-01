@@ -33,7 +33,7 @@ export default function LoginUser() {
   
 const BtnStyle = {
   border: 'var(--border)',
-  color: 'var(--btnColor)',
+  color: 'white',
   backgroundColor: 'var(--bgColor)',
   width: 'var(--btnWidth)',
   borderRadius: 'var(--btradius)'

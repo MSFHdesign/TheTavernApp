@@ -16,13 +16,13 @@ export default function Login() {
           The Tavern
         </Typography>
 
-          <Box sx={{ marginTop: '100px',
+        <Box sx={{ marginTop: '100px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--gap)',
             }}>
             <LoginUser />
             <CreateUser />
           </Box>
-           </Box>
+    </Box>
 
 
 

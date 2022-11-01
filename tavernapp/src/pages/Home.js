@@ -14,20 +14,20 @@ import { Box, Typography,  } from '@mui/material'
 export default function Home() {
     return(
     
-    <Box className="App" sx={{minHeight: '100vh',pb:'calc(var(--addbtnSize) + 20%)',}}> <TopNav/>
+      <Box className="App" sx={{minHeight: '100vh',pb:'calc(var(--addbtnSize) + 20%)',}}> <TopNav/>
 
-    <body>
-  <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-  <ProfilPic /> <Box sx={{p:'0.5rem'}}/>
-  <Box> 
-  <Typography sx={{fontSize: 50, color: 'var(--H2Color)'}}> Velkommen</Typography>
-  <ProfilName />
-  </Box>
-
-
+        <body>
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
+            <ProfilPic /> <Box sx={{p:'0.5rem'}}/>
+            <Box> 
+            <Typography sx={{fontSize: 50, color: 'var(--H2Color)'}}> Velkommen</Typography>
+            <ProfilName />
+            </Box>
 
 
-  <BottomNav /></Box>
+
+
+            <BottomNav /></Box>
 
 
 
