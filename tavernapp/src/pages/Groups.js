@@ -22,7 +22,7 @@ export default function Groups() {
     <Box sx={ContainerStyle}>
       {" "}
       <TopNav />
-      <Typography className="test" sx={{ fontSize: 50 }}>
+      <Typography className="test" sx={{ fontSize: 50     }}>
         Groups
       </Typography>
       <Box

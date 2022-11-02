@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../firebaseConfig";
 import { toast } from "react-toastify";
-import "./AddMessage.css";
 import { Button } from "@mui/material";
 
 // Magnus

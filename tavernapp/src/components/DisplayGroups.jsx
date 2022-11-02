@@ -5,6 +5,8 @@ import { db } from "../firebaseConfig";
 import DeleteGroup from "./DeleteGroup";
 import "./addGroups.css";
 
+
+//Kasper
 export default function Groups() {
   const [groups, setGroups] = useState([]);
   useEffect(() => {
@@ -66,8 +68,8 @@ export default function Groups() {
             <Box
               sx={{
                 m: 1,
-                mt: 4,
-                p: 1,
+                mt: 2,
+                p: 2,
                 pb: 3,
                 backgroundColor: "hsl(0, 0%, 0%, 0.40)",
                 borderRadius: "26px",
@@ -94,7 +96,7 @@ export default function Groups() {
                 <div>
                   <Typography
                     sx={{
-                      fontSize: "var(--H2size",
+                      fontSize: "var(--H2size)",
                       textDecoration: "bold",
                       pt: 1,
                       color: "whitesmoke",
@@ -106,14 +108,16 @@ export default function Groups() {
                   <Typography
                     variant="p"
                     sx={{
-                      fontSize: 20,
+                      fontSize: 15,
                       pt: 2,
                       pb: "22px",
+                      paddingButtom: 2,
                       color: "whitesmoke",
                     }}
                   >
                     {description}
                   </Typography>
+                <div className="typoGroup">
                   <Typography
                     variant="p"
                     sx={{ fontSize: 14, mb: 2, color: "whitesmoke" }}
@@ -121,6 +125,7 @@ export default function Groups() {
                     {" "}
                     <br /> Maks antal medlemmer: {numberOfPeople} <br />
                   </Typography>
+                </div>
                   <Member />
                   <Typography
                     variant="p"
