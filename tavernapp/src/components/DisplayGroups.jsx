@@ -69,7 +69,7 @@ export default function Groups() {
               sx={{
                 m: 1,
                 mt: 2,
-                p: 2,
+                p: 1,
                 pb: 3,
                 backgroundColor: "hsl(0, 0%, 0%, 0.40)",
                 borderRadius: "26px",
@@ -93,7 +93,7 @@ export default function Groups() {
                     style={{ height: 180, paddingTop: "15px" }}
                   />
                 </div>
-                <div>
+                <div className="form-display">
                   <Typography
                     sx={{
                       fontSize: "var(--H2size)",
@@ -111,7 +111,6 @@ export default function Groups() {
                       fontSize: 15,
                       pt: 2,
                       pb: "22px",
-                      paddingButtom: 2,
                       color: "whitesmoke",
                     }}
                   >

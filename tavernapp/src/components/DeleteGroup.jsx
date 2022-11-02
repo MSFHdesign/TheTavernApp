@@ -25,7 +25,7 @@ export default function DeleteGroup({ id, imageUrl }) {
           border: "var(--DeleteBorder)",
           backgroundColor: "var(--Delete)",
           mt: 2,
-          p: 1.3,
+          p: 1.2,
           color: "var(--DeleteColor)",
         }}
         className="deletebtn"

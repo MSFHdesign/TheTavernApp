@@ -23,7 +23,7 @@ export default function Groups() {
       {" "}
       <TopNav />
       <Typography className="test" sx={{ fontSize: 50     }}>
-        Groups
+        Grupper
       </Typography>
       <Box
         sx={{
